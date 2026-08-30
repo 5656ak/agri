@@ -136,10 +136,41 @@ class DataStore {
   public updateLocation(location: LocationInfo): void {
     this.farmer.location = location;
     this.farm.location = location;
+
+    // Dynamically calibrate micro-weather for the selected district
+    const isPunjabHaryana = ['Punjab', 'Haryana'].includes(location.state);
+    const isSouthIndia = ['Tamil Nadu', 'Andhra Pradesh', 'Telangana', 'Karnataka', 'Kerala'].includes(location.state);
+    const isWestIndia = ['Rajasthan', 'Gujarat', 'Maharashtra'].includes(location.state);
+
+    if (isPunjabHaryana) {
+      this.weather.temperatureC = 30;
+      this.weather.conditionHi = 'धूप व शुष्क (Sunny & Clear)';
+      this.weather.conditionEn = 'Sunny & Dry';
+      this.weather.rainProbabilityPercent = 15;
+      this.weather.farmingDirectiveHi = `कल सुबह ${location.district} के खेतों में हल्की सिंचाई करें।`;
+      this.weather.farmingDirectiveEn = `Irrigate vegetative plots tomorrow morning in ${location.district}.`;
+    } else if (isSouthIndia) {
+      this.weather.temperatureC = 27;
+      this.weather.conditionHi = 'हल्की वर्षा (Scattered Rain)';
+      this.weather.conditionEn = 'Scattered Rain';
+      this.weather.rainProbabilityPercent = 70;
+      this.weather.farmingDirectiveHi = `बारिश की संभावना के कारण आज ${location.district} में सिंचाई स्थगित रखें।`;
+      this.weather.farmingDirectiveEn = `Rain expected in ${location.district}. Skip irrigation today.`;
+    } else {
+      this.weather.temperatureC = 28;
+      this.weather.conditionHi = 'बादल व बूंदाबांदी (Overcast with Showers)';
+      this.weather.conditionEn = 'Overcast with Showers';
+      this.weather.rainProbabilityPercent = 65;
+      this.weather.farmingDirectiveHi = `आज ${location.district} में 65% बारिश की संभावना है — आज सिंचाई न करें।`;
+      this.weather.farmingDirectiveEn = `65% rain probability today in ${location.district} — Avoid irrigation today.`;
+    }
+
+    this.saveToStorage(STORAGE_KEYS.WEATHER, this.weather);
     this.saveToStorage(STORAGE_KEYS.FARMER, this.farmer);
     this.saveToStorage(STORAGE_KEYS.FARM, this.farm);
     this.notify();
   }
+
 
   // --- Farm & Fields ---
   public getFarm(): Farm {
