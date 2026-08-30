@@ -1,0 +1,119 @@
+{
+  "crop_id": "tomato",
+  "crop_name_en": "Tomato",
+  "crop_name_hi": "टमाटर",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_MAIN"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Nursery Sowing",
+      "stage_name_hi": "1. बीज चयन एवं नर्सरी बुवाई",
+      "duration_days": "Day 0 - 25",
+      "irrigation_guidance": "Light sprinkling with rosecan on raised nursery beds.",
+      "nutrient_guidance": "Nursery soil enriched with vermicompost (2:1:1 soil:sand:compost). Seed treatment with Trichoderma viride @ 5g/kg.",
+      "pest_disease_scouting": "Scout for damping-off (Pythium/Rhizoctonia) in young seedlings.",
+      "precautions": "Cover nursery beds with 40-mesh insect-proof net to prevent whitefly transmission of Tomato Leaf Curl Virus.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Main Field Preparation",
+      "stage_name_hi": "2. मुख्य खेत की तैयारी",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Pre-irrigate field to prepare ridges and furrows.",
+      "nutrient_guidance": "Apply FYM @ 20 tonnes/ha + Basal full P, full K, and 1/3rd N.",
+      "pest_disease_scouting": "Check for root-knot nematode galling history.",
+      "precautions": "Make raised beds or ridges to facilitate good drainage and furrow irrigation.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Transplanting",
+      "stage_name_hi": "3. रोपाई",
+      "duration_days": "Day 25 - 30 (Seedling age)",
+      "irrigation_guidance": "Immediate light irrigation after transplanting in afternoon hours.",
+      "nutrient_guidance": "Dip seedling roots in Pseudomonas fluorescens suspension (0.2%) for 15 mins.",
+      "pest_disease_scouting": "Scout for transplant shock and cutworm damage.",
+      "precautions": "Transplant 25-30 day old sturdy seedlings at 60x45 cm or 75x60 cm spacing.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Establishment & Early Vegetative",
+      "stage_name_hi": "4. पौधे का जमाव एवं प्रारंभिक वृद्धि",
+      "duration_days": "Day 10 - 25 (DAT)",
+      "irrigation_guidance": "Irrigate at 5-7 day intervals depending on soil moisture.",
+      "nutrient_guidance": "No heavy fertilizer until root anchoring is complete.",
+      "pest_disease_scouting": "Scout for leaf miner (serpentine mines) and early thrips.",
+      "precautions": "Keep field weed-free with shallow hoeing.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Active Vegetative & Staking",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि एवं स्टेकिंग (सहारा देना)",
+      "duration_days": "Day 25 - 45 (DAT)",
+      "irrigation_guidance": "Maintain uniform soil moisture; avoid alternate drought and over-flooding.",
+      "nutrient_guidance": "1st Top-dressing of Nitrogen (Urea) at 30 DAT.",
+      "pest_disease_scouting": "Scout for Tomato Leaf Curl Virus (curled thickened leaves) and Early Blight (target spot lesions).",
+      "precautions": "Stake indeterminate varieties with bamboo poles or trellis wire to keep foliage off the ground.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Flowering & Fruit Set",
+      "stage_name_hi": "6. फूल आना एवं फल लगना",
+      "duration_days": "Day 45 - 65 (DAT)",
+      "irrigation_guidance": "Regular furrow or drip irrigation; moisture stress causes flower drop.",
+      "nutrient_guidance": "Foliar spray of Boron (20% Solubor) @ 1g/L and 19:19:19 @ 3g/L to prevent blossom drop.",
+      "pest_disease_scouting": "Install pheromone traps (Helilure) @ 5/acre to monitor Helicoverpa fruit borer moths.",
+      "precautions": "Avoid heavy chemical spraying during honeybee active hours.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Fruit Development & Enlargement",
+      "stage_name_hi": "7. फल का विकास व विस्तार",
+      "duration_days": "Day 65 - 90 (DAT)",
+      "irrigation_guidance": "Uniform irrigation; irregular watering leads to Blossom End Rot and fruit cracking.",
+      "nutrient_guidance": "2nd Top-dressing of Potassium (MOP/SOP) + Calcium Nitrate @ 10 kg/acre.",
+      "pest_disease_scouting": "Scout for fruit borer entrance holes and Late Blight greasy rot on green fruits.",
+      "precautions": "Maintain continuous optimum moisture to prevent fruit skin splitting.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Fruit Maturity & Color Turning (Breaker Stage)",
+      "stage_name_hi": "8. फल परिपक्वता (ब्रेकर अवस्था - लालिमा आना)",
+      "duration_days": "Day 85 - 110 (DAT)",
+      "irrigation_guidance": "Moderate irrigation; do not waterlog root zone.",
+      "nutrient_guidance": "No nitrogen fertilizer at this stage.",
+      "pest_disease_scouting": "Scout for fruit rot fungi (Anthracnose).",
+      "precautions": "Harvest at 'breaker stage' (pink tinge at blossom end) for distant transport.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting / Multiple Pickings",
+      "stage_name_hi": "9. फलों की तुड़ाई (विभिन्न चरणों में)",
+      "duration_days": "Day 90 - 130",
+      "irrigation_guidance": "Light irrigation after each major picking.",
+      "nutrient_guidance": "Optional foliar micronutrient spray to sustain subsequent pickings.",
+      "pest_disease_scouting": "Separate and destroy bored fruits away from field.",
+      "precautions": "Pick fruits along with pedicel in early morning or late afternoon.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Grading, Packing & Marketing",
+      "stage_name_hi": "10. ग्रेडिंग, पैकिंग एवं विपणन",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Sort out damaged, bruised, or virus-infected fruits.",
+      "precautions": "Pack in plastic crates instead of rough gunny bags to reduce transit damage.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    }
+  ]
+}

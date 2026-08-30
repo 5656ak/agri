@@ -1,0 +1,119 @@
+{
+  "crop_id": "gram",
+  "crop_name_en": "Gram / Chickpea",
+  "crop_name_hi": "चना",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_MAIN"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Inoculation",
+      "stage_name_hi": "1. बीज चयन एवं राइजोबियम उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Sow in residual subsoil moisture.",
+      "nutrient_guidance": "Treat seeds with Mesorhizobium ciceri & PSB inoculants + Trichoderma @ 5g/kg seed.",
+      "pest_disease_scouting": "Check seed lot for wilt and collar rot history.",
+      "precautions": "Use wilt-resistant cultivars (e.g. JG 11, Pusa 362, RVG 202).",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Deep Tilth",
+      "stage_name_hi": "2. खेत की तैयारी एवं जुताई",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Conserve moisture with heavy wooden plank.",
+      "nutrient_guidance": "Basal application of DAP (20 kg N + 50 kg P2O5/ha) + Sulphur 20 kg/ha via gypsum.",
+      "pest_disease_scouting": "Check for soil-borne Fusarium wilt propagules.",
+      "precautions": "Do not over-pulverize clay soils; gram prefers loose, rough tilth for aeration.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Sowing & Depth Placement",
+      "stage_name_hi": "3. बुवाई एवं गहराई",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Ensure sowing at 7-10 cm deep into moist soil zone.",
+      "nutrient_guidance": "Drill basal fertilizers below seed level.",
+      "pest_disease_scouting": "Scout for surface insects.",
+      "precautions": "Deep sowing (8-10 cm) protects seedlings from early collar rot and wilt in dry topsoil.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Germination & Seedling Stage",
+      "stage_name_hi": "4. अंकुरण एवं प्रारंभिक अवस्था",
+      "duration_days": "Day 7 - 20",
+      "irrigation_guidance": "No irrigation needed.",
+      "nutrient_guidance": "No top-dress nitrogen (nodules fix atmospheric N2).",
+      "pest_disease_scouting": "Scout for Collar Rot (Sclerotium rolfsii) and seedling mortality.",
+      "precautions": "Avoid waterlogging; gram is extremely sensitive to excess root moisture.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Vegetative & Nipping / Branching",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि एवं निपिंग (शीर्ष तोड़ना)",
+      "duration_days": "Day 25 - 45",
+      "irrigation_guidance": "Light irrigation at pre-flowering (40-45 DAS) only if soil is completely dry.",
+      "nutrient_guidance": "Optional 2% Urea foliar spray at 40 DAS if nodulation is weak.",
+      "pest_disease_scouting": "Scout for early Helicoverpa pod borer larvae on tender leaflets.",
+      "precautions": "Perform 'Nipping' (plucking apical shoots at 30-35 DAS) to induce heavy lateral branching.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Flowering Stage",
+      "stage_name_hi": "6. फूल आने की अवस्था",
+      "duration_days": "Day 45 - 70",
+      "irrigation_guidance": "Strictly avoid flood irrigation during peak flowering (causes flower shedding).",
+      "nutrient_guidance": "Foliar spray of 2% DAP or Pulse Wonder @ 2 kg/acre to prevent flower drop.",
+      "pest_disease_scouting": "Install Pheromone traps (Helilure) @ 5/acre and T-shaped bird perches @ 20/acre for pod borer.",
+      "precautions": "Heavy watering at bloom triggers vegetative growth at the expense of pod setting.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Pod Formation & Seed Development",
+      "stage_name_hi": "7. फलियां (घेंटी) बनना व दाना भराव",
+      "duration_days": "Day 70 - 95",
+      "irrigation_guidance": "1 light irrigation at pod filling stage (70-75 DAS) in light sandy soils.",
+      "nutrient_guidance": "Foliar spray of 0:0:50 @ 1% for uniform bold seed size.",
+      "pest_disease_scouting": "Scout for Gram Pod Borer (Helicoverpa armigera) entering pods; count larvae per meter row.",
+      "precautions": "Spray bio-pesticide (HaNPV @ 250 LE/ha or Bacillus thuringiensis) at early larval instars.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Physiological Maturity",
+      "stage_name_hi": "8. परिपक्वता (पौधे का सूखना व पीला पड़ना)",
+      "duration_days": "Day 95 - 115",
+      "irrigation_guidance": "Dry field.",
+      "nutrient_guidance": "No fertilizer.",
+      "pest_disease_scouting": "Check for pod rattling sound when shaken.",
+      "precautions": "Harvest when leaves turn reddish-brown/straw color and pods are crisp dry.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Threshing",
+      "stage_name_hi": "9. कटाई एवं गहाई",
+      "duration_days": "Day 105 - 125",
+      "irrigation_guidance": "Dry field.",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Inspect threshed seeds for bruchid beetle holes.",
+      "precautions": "Harvest in morning to minimize pod shattering.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest Drying & Storage",
+      "stage_name_hi": "10. कटाई उपरांत सुखाना एवं भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Scout storage bins for Pulse Beetle (Callosobruchus chinensis).",
+      "precautions": "Sun dry gram seeds to <= 9-10% moisture before storing in clean airtight bins.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "crop_id": "rice",
+  "crop_name_en": "Rice / Paddy",
+  "crop_name_hi": "धान (चावल)",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_IIRR"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Treatment",
+      "stage_name_hi": "1. बीज चयन एवं उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Prepare wet nursery beds with light standing water (2-3 cm).",
+      "nutrient_guidance": "Seed treatment with Trichoderma viride @ 5-10g/kg seed or salt water floatation (10% brine).",
+      "pest_disease_scouting": "Check for discolored or chaffy seeds.",
+      "precautions": "Ensure certified seed tag with >80% germination rate.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Puddling",
+      "stage_name_hi": "2. खेत की तैयारी एवं लेव (पडलिंग)",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Puddle field with 5-7 cm standing water to reduce percolation losses.",
+      "nutrient_guidance": "Basal application of full P2O5, full K2O, and 1/3rd Nitrogen (Urea) into puddled soil.",
+      "pest_disease_scouting": "Inspect for snail damage and root-knot nematode history.",
+      "precautions": "Level field perfectly to maintain uniform water depth.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Transplanting / Direct Sowing",
+      "stage_name_hi": "3. रोपाई / सीधी बुवाई",
+      "duration_days": "Day 21 - 25 (Nursery age)",
+      "irrigation_guidance": "Maintain 2-3 cm shallow water layer at transplanting.",
+      "nutrient_guidance": "Zinc Sulphate 21% @ 25 kg/ha applied basal if soil test indicates deficiency.",
+      "pest_disease_scouting": "Scout for nursery thrips and caseworm.",
+      "precautions": "Transplant 2-3 seedlings per hill at 20x15 cm spacing. Do not plant deeper than 2-3 cm.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Seedling Establishment",
+      "stage_name_hi": "4. पौधे का जमाव",
+      "duration_days": "Day 7 - 10 (Post-transplant)",
+      "irrigation_guidance": "Maintain 3-5 cm standing water.",
+      "nutrient_guidance": "No top-dressing during initial root establishment.",
+      "pest_disease_scouting": "Scout for whorl maggot and early armyworm clips.",
+      "precautions": "Ensure drainage channels are clear to prevent submergence during heavy monsoon downpours.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Active Tillering Stage",
+      "stage_name_hi": "5. कल्ले फूटना (सक्रिय टिलरिंग)",
+      "duration_days": "Day 25 - 45 (DAT)",
+      "irrigation_guidance": "Alternate wetting and drying (AWD) or maintain 3-5 cm water.",
+      "nutrient_guidance": "1st top-dressing of Nitrogen (Urea) at active tillering.",
+      "pest_disease_scouting": "Scout for Yellow Stem Borer (dead hearts), leaf folder, and bacterial leaf blight.",
+      "precautions": "Avoid excessive nitrogen which promotes sheath blight and blast.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Panicle Initiation & Booting",
+      "stage_name_hi": "6. बाली बनना एवं गभोट अवस्था",
+      "duration_days": "Day 50 - 70 (DAT)",
+      "irrigation_guidance": "Maintain continuous 5 cm standing water; critical stage for spikelet fertility.",
+      "nutrient_guidance": "2nd top-dressing of Nitrogen (Urea) at panicle initiation.",
+      "pest_disease_scouting": "Scout for neck blast lesions and Brown Planthopper (BPH) at base of tillers.",
+      "precautions": "Never let soil dry out during panicle initiation.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Flowering & Grain Filling (Milk to Dough)",
+      "stage_name_hi": "7. फूल आना एवं दाना भराव (दूधिया अवस्था)",
+      "duration_days": "Day 70 - 95 (DAT)",
+      "irrigation_guidance": "Keep field saturated with 2-3 cm water.",
+      "nutrient_guidance": "Optional foliar spray of 0:0:50 (SOP) @ 1% to enhance grain filling.",
+      "pest_disease_scouting": "Scout for Gundhi bug (milky grain sucking) and false smut balls.",
+      "precautions": "Avoid chemical spraying during peak anthesis (9 AM - 12 PM).",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Physiological Maturity",
+      "stage_name_hi": "8. परिपक्वता (बालियों का पीला होना)",
+      "duration_days": "Day 100 - 120 (DAT)",
+      "irrigation_guidance": "Completely drain out field water 10-14 days before harvest.",
+      "nutrient_guidance": "No fertilizer application.",
+      "pest_disease_scouting": "Check for rat burrows in bunds.",
+      "precautions": "Allow soil to firm up for manual or mechanical combine movement.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Threshing",
+      "stage_name_hi": "9. कटाई एवं गहाई",
+      "duration_days": "Day 120 - 135",
+      "irrigation_guidance": "Dry field.",
+      "nutrient_guidance": "In-situ stubble management with bio-decomposers.",
+      "pest_disease_scouting": "Inspect paddy grains for discoloration.",
+      "precautions": "Harvest when 80-85% grains in panicle turn straw golden.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest & Storage",
+      "stage_name_hi": "10. कटाई उपरांत प्रबंधन एवं सुरक्षित भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Scout for rice moth and grain weevils.",
+      "precautions": "Sun dry paddy down to 12-14% moisture before storage or milling.",
+      "source_ids": ["SRC_ICAR_IIRR"]
+    }
+  ]
+}

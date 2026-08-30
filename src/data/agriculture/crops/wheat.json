@@ -1,0 +1,119 @@
+{
+  "crop_id": "wheat",
+  "crop_name_en": "Wheat",
+  "crop_name_hi": "गेहूं",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_IIWBR"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Treatment",
+      "stage_name_hi": "1. बीज चयन एवं उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Ensure adequate pre-sowing irrigation (Paleva/Rauni) to create a moist seedbed.",
+      "nutrient_guidance": "Treat seeds with bio-fertilizers (Azotobacter & PSB cultures @ 20g/kg seed). No direct chemical fertilizer on seeds.",
+      "pest_disease_scouting": "Check for broken, shrivelled seeds and loose smut infection history.",
+      "precautions": "Use certified seed tags (e.g., HD 3086, DBW 187, DBW 222). Do not mix chemical fungicide directly with bio-fertilizer cultures simultaneously.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Soil Health",
+      "stage_name_hi": "2. खेत की तैयारी एवं मृदा स्वास्थ्य",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Plough at optimal soil moisture tilth (neither too dry nor waterlogged).",
+      "nutrient_guidance": "Apply well-decomposed FYM @ 10-15 tonnes/ha during initial ploughing. Apply full Basal P2O5 and K2O based on Soil Health Card.",
+      "pest_disease_scouting": "Inspect for termites and white grub larvae in field corners.",
+      "precautions": "Avoid unrotted fresh cattle manure to prevent termite flare-up.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Sowing / Transplanting",
+      "stage_name_hi": "3. बुवाई",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Sow when soil moisture line is at 4-5 cm depth.",
+      "nutrient_guidance": "Drill basal fertilizer 2-3 cm below the seed line using a Seed-cum-Fertilizer drill.",
+      "pest_disease_scouting": "Protect surface seeds from bird picking and rodent burrows.",
+      "precautions": "Maintain 20-22.5 cm row spacing. Sowing deeper than 5 cm causes delayed and uneven emergence.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Germination & Establishment",
+      "stage_name_hi": "4. अंकुरण एवं प्रारंभिक अवस्था",
+      "duration_days": "Day 7 - 15",
+      "irrigation_guidance": "No irrigation required if pre-sowing moisture was adequate.",
+      "nutrient_guidance": "No top-dressing fertilizer required at seedling emergence.",
+      "pest_disease_scouting": "Scout for cutworms clipping tender young shoots at soil level.",
+      "precautions": "Avoid standing water in low-lying field patches.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Vegetative / Tillering (CRI Stage)",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि / कल्ले फूटने की अवस्था (CRI)",
+      "duration_days": "Day 20 - 45",
+      "irrigation_guidance": "First and most critical irrigation at Crown Root Initiation (CRI) 20-25 days after sowing (DAS).",
+      "nutrient_guidance": "Apply 1st top-dressing of Nitrogen (Urea) immediately after 1st irrigation as per STCR recommendation.",
+      "pest_disease_scouting": "Scout lower canopy leaves for yellow rust (stripe rust) pustules and broadleaf weeds (Phalaris minor / Bathua).",
+      "precautions": "Moisture stress at CRI causes irreversible tillering reduction.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Flowering / Panicle Initiation (Booting & Heading)",
+      "stage_name_hi": "6. फूल आना / बाली निकलना (बूट व हेडिंग अवस्था)",
+      "duration_days": "Day 50 - 75",
+      "irrigation_guidance": "Critical irrigation at late jointing/booting stage (50-60 DAS) to maintain uniform spikelet development.",
+      "nutrient_guidance": "Apply 2nd top-dressing of Nitrogen (if recommended by regional split) prior to panicle emergence.",
+      "pest_disease_scouting": "Monitor for powdery mildew, leaf blight, and foliar aphids.",
+      "precautions": "Avoid foliar spraying during morning peak pollination window.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Fruiting / Grain Filling (Milk to Soft Dough)",
+      "stage_name_hi": "7. दाना भराव अवस्था (दूधिया से दाना सख्त होना)",
+      "duration_days": "Day 75 - 105",
+      "irrigation_guidance": "Irrigate at milk and soft dough stage on calm days to prevent lodging.",
+      "nutrient_guidance": "Optional foliar spray of Potassium Nitrate (13:0:45) @ 1% during dry terminal heat spells.",
+      "pest_disease_scouting": "Scout for earhead caterpillars and late black/brown rust symptoms.",
+      "precautions": "Never irrigate during high winds (>18 km/h) to prevent crop lodging.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Physiological Maturity",
+      "stage_name_hi": "8. परिपक्वता अवस्था",
+      "duration_days": "Day 105 - 125",
+      "irrigation_guidance": "Strictly stop all irrigation 10-15 days prior to harvest.",
+      "nutrient_guidance": "No fertilizer application at maturity.",
+      "pest_disease_scouting": "Scout for pre-harvest rodent activity.",
+      "precautions": "Allow uniform field drying for combine harvester entry.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Threshing",
+      "stage_name_hi": "9. कटाई एवं गहाई",
+      "duration_days": "Day 125 - 135",
+      "irrigation_guidance": "Dry field conditions.",
+      "nutrient_guidance": "Stubble management: Spray Pusa Bio-decomposer on crop residue instead of burning.",
+      "pest_disease_scouting": "Inspect harvested grain samples for broken kernels or kernel bunt.",
+      "precautions": "Do not burn crop residue. Harvest when grain moisture is below 15%.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest & Storage",
+      "stage_name_hi": "10. कटाई उपरांत प्रबंधन एवं सुरक्षित भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Scout storage bins for Khapra beetle (Trogoderma granarium) and rice weevil.",
+      "precautions": "Sun-dry grain to <= 12% moisture before hermetic or metal bin storage.",
+      "source_ids": ["SRC_ICAR_IIWBR"]
+    }
+  ]
+}

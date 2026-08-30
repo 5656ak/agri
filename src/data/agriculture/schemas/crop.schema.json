@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CropMasterSchema",
+  "type": "object",
+  "required": [
+    "crop_id",
+    "name_en",
+    "name_hi",
+    "category",
+    "season",
+    "typical_duration",
+    "data_status"
+  ],
+  "properties": {
+    "crop_id": { "type": "string" },
+    "name_en": { "type": "string" },
+    "name_hi": { "type": "string" },
+    "botanical_name": { "type": ["string", "null"] },
+    "category": {
+      "type": "string",
+      "enum": ["Cereal", "Pulse", "Cash Crop", "Vegetable", "Oilseed"]
+    },
+    "season": {
+      "type": "string",
+      "enum": ["Rabi", "Kharif", "Zaid", "Rabi/Kharif", "Kharif/Rabi", "All-season"]
+    },
+    "typical_duration": {
+      "type": "object",
+      "required": ["min_days", "max_days"],
+      "properties": {
+        "min_days": { "type": "number" },
+        "max_days": { "type": "number" }
+      }
+    },
+    "supported_states": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "data_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "DEMO", "PENDING_VERIFICATION"]
+    }
+  }
+}

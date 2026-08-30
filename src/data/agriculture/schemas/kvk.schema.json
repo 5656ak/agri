@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KVKDirectorySchema",
+  "type": "object",
+  "required": [
+    "kvk_id",
+    "name",
+    "state",
+    "district",
+    "host_organization",
+    "phone",
+    "address",
+    "source_id",
+    "verification_status"
+  ],
+  "properties": {
+    "kvk_id": { "type": "string" },
+    "name": { "type": "string" },
+    "state": { "type": "string" },
+    "district": { "type": "string" },
+    "host_organization": { "type": "string" },
+    "phone": { "type": "string" },
+    "email": { "type": ["string", "null"] },
+    "address": { "type": "string" },
+    "latitude": { "type": ["number", "null"] },
+    "longitude": { "type": ["number", "null"] },
+    "source_id": { "type": "string" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "DEMO", "PENDING_VERIFICATION"]
+    }
+  }
+}

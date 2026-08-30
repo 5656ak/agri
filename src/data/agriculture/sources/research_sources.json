@@ -1,0 +1,90 @@
+[
+  {
+    "source_id": "SRC_ICAR_MAIN",
+    "institution": "Indian Council of Agricultural Research (ICAR)",
+    "document_title": "Handbook of Agriculture & National Crop Guidelines",
+    "publication_year": "2023",
+    "revision_year": "2024",
+    "source_type": "ICAR",
+    "official_url": "https://icar.org.in",
+    "verification_status": "VERIFIED",
+    "notes": "Apex national body for agricultural research and education in India."
+  },
+  {
+    "source_id": "SRC_ICAR_IIWBR",
+    "institution": "ICAR-Indian Institute of Wheat and Barley Research, Karnal",
+    "document_title": "Package of Practices for Wheat & Barley Cultivation in Indo-Gangetic Plains",
+    "publication_year": "2023",
+    "revision_year": "2024",
+    "source_type": "ICAR_INSTITUTE",
+    "official_url": "https://iiwbr.icar.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "Verified source for Wheat agronomy, stripe rust management, and CRI irrigation intervals."
+  },
+  {
+    "source_id": "SRC_ICAR_IIRR",
+    "institution": "ICAR-Indian Institute of Rice Research, Hyderabad",
+    "document_title": "Rice Production Technology & Package of Practices",
+    "publication_year": "2023",
+    "revision_year": "2024",
+    "source_type": "ICAR_INSTITUTE",
+    "official_url": "https://www.icar-iirr.org",
+    "verification_status": "VERIFIED",
+    "notes": "Verified source for Paddy/Rice cultivation, blast, and bacterial leaf blight management."
+  },
+  {
+    "source_id": "SRC_ICAR_IISS",
+    "institution": "ICAR-Indian Institute of Soil Science, Bhopal",
+    "document_title": "Soil Test Crop Response (STCR) Equations and Balanced Fertilizer Management",
+    "publication_year": "2022",
+    "revision_year": "2023",
+    "source_type": "ICAR_INSTITUTE",
+    "official_url": "https://iiss.icar.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "Verified source for regional STCR target yield mathematical formulas."
+  },
+  {
+    "source_id": "SRC_ICAR_CPRI",
+    "institution": "ICAR-Central Potato Research Institute, Shimla",
+    "document_title": "Potato Production & Late Blight Management Practices",
+    "publication_year": "2023",
+    "revision_year": "2024",
+    "source_type": "ICAR_INSTITUTE",
+    "official_url": "https://cpri.icar.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "Verified source for Potato cultivation, seed tuber management, and Phytophthora blight control."
+  },
+  {
+    "source_id": "SRC_CIBRC",
+    "institution": "Central Insecticides Board & Registration Committee (CIB&RC), Directorate of Plant Protection",
+    "document_title": "Major Uses of Pesticides Registered Under the Insecticides Act, 1968",
+    "publication_year": "2024",
+    "revision_year": "2024",
+    "source_type": "CIBRC",
+    "official_url": "https://ppqs.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "Statutory body governing registered pesticides, formulations, approved dosages, and PHI in India."
+  },
+  {
+    "source_id": "SRC_SOIL_HEALTH_CARD",
+    "institution": "Department of Agriculture & Farmers Welfare, Ministry of Agriculture & Farmers Welfare",
+    "document_title": "Soil Health Card Scheme Guidelines and Critical Nutrient Index Values",
+    "publication_year": "2021",
+    "revision_year": "2023",
+    "source_type": "SOIL_HEALTH_CARD",
+    "official_url": "https://soilhealth.dac.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "National parameters for Low, Medium, High classifications of N, P, K, pH and EC."
+  },
+  {
+    "source_id": "SRC_KVK_NETWORK",
+    "institution": "Agricultural Extension Division, ICAR",
+    "document_title": "Directory of Krishi Vigyan Kendras across Indian Districts",
+    "publication_year": "2023",
+    "revision_year": "2024",
+    "source_type": "KVK",
+    "official_url": "https://kvk.icar.gov.in",
+    "verification_status": "VERIFIED",
+    "notes": "Directory of 731 frontline district extension centers."
+  }
+]

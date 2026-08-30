@@ -1,0 +1,25 @@
+[
+  {
+    "chemical_id": "CHEM_PROPICONAZOLE_25EC",
+    "active_ingredient": "Propiconazole 25% EC",
+    "formulation": "Emulsifiable Concentrate (EC)",
+    "crop_id": "wheat",
+    "target_condition_ids": ["DIS_WHEAT_YELLOW_RUST", "DIS_WHEAT_BROWN_RUST", "DIS_WHEAT_KARNAL_BUNT"],
+    "dosage": {
+      "per_acre": "200 ml",
+      "per_hectare": "500 ml"
+    },
+    "dilution": "Dissolve in 200 Litres of water per acre (500 L/ha) for uniform foliar spray",
+    "application_method": "Foliar spray at the first appearance of yellow/brown rust pustules",
+    "phi_waiting_period_days": 30,
+    "safety_precautions": [
+      "Wear protective nose mask, eye goggles, and chemical-resistant gloves during spray preparation",
+      "Do not spray during high winds (>15 km/h) or under direct midday sun",
+      "Keep cattle and grazing animals out of treated field for at least 15 days",
+      "Dispose of empty containers safely as per CIB&RC environmental guidelines"
+    ],
+    "source_id": "SRC_CIBRC",
+    "verification_status": "VERIFIED",
+    "last_verified_date": "2024-05-01"
+  }
+]

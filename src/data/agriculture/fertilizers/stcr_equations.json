@@ -1,0 +1,159 @@
+[
+  {
+    "equation_id": "STCR_WHEAT_ALLUVIAL_IGP",
+    "crop_id": "wheat",
+    "region_id": "indo_gangetic_plains",
+    "state_coverage": ["Haryana", "Punjab", "Western Uttar Pradesh"],
+    "soil_type": "Alluvial Sandy Loam / Loam",
+    "target_yield_min": 40,
+    "target_yield_max": 65,
+    "equation_N": {
+      "formula": "FN (kg/ha) = 4.39 * T - 0.22 * SN",
+      "a_coeff": 4.39,
+      "b_coeff": 0.22
+    },
+    "equation_P2O5": {
+      "formula": "FP2O5 (kg/ha) = 2.82 * T - 0.39 * SP",
+      "a_coeff": 2.82,
+      "b_coeff": 0.39
+    },
+    "equation_K2O": {
+      "formula": "FK2O (kg/ha) = 1.41 * T - 0.16 * SK",
+      "a_coeff": 1.41,
+      "b_coeff": 0.16
+    },
+    "stage_split": {
+      "basal": { "n_ratio": 0.333, "p_ratio": 1.0, "k_ratio": 1.0 },
+      "first_topdress": { "n_ratio": 0.333, "p_ratio": 0.0, "k_ratio": 0.0 },
+      "second_topdress": { "n_ratio": 0.334, "p_ratio": 0.0, "k_ratio": 0.0 }
+    },
+    "micronutrient_guidance": "If soil available Zinc is < 0.6 ppm (Soil Health Card rating Low), apply Zinc Sulphate 21% @ 25 kg/ha basal or 0.5% foliar spray with 0.25% lime at 30 & 45 DAS.",
+    "source_id": "SRC_ICAR_IISS",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "equation_id": "STCR_RICE_ALLUVIAL_IGP",
+    "crop_id": "rice",
+    "region_id": "indo_gangetic_plains",
+    "state_coverage": ["Haryana", "Punjab", "Uttar Pradesh"],
+    "soil_type": "Alluvial Clay Loam",
+    "target_yield_min": 45,
+    "target_yield_max": 75,
+    "equation_N": {
+      "formula": "FN (kg/ha) = 4.25 * T - 0.34 * SN",
+      "a_coeff": 4.25,
+      "b_coeff": 0.34
+    },
+    "equation_P2O5": {
+      "formula": "FP2O5 (kg/ha) = 2.95 * T - 0.48 * SP",
+      "a_coeff": 2.95,
+      "b_coeff": 0.48
+    },
+    "equation_K2O": {
+      "formula": "FK2O (kg/ha) = 1.80 * T - 0.20 * SK",
+      "a_coeff": 1.80,
+      "b_coeff": 0.20
+    },
+    "stage_split": {
+      "basal": { "n_ratio": 0.333, "p_ratio": 1.0, "k_ratio": 1.0 },
+      "first_topdress": { "n_ratio": 0.333, "p_ratio": 0.0, "k_ratio": 0.0 },
+      "second_topdress": { "n_ratio": 0.334, "p_ratio": 0.0, "k_ratio": 0.0 }
+    },
+    "micronutrient_guidance": "Apply Zinc Sulphate 21% @ 25 kg/ha at final puddling if soil test indicates deficiency.",
+    "source_id": "SRC_ICAR_IISS",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "equation_id": "STCR_MUSTARD_LIGHT_ALLUVIAL",
+    "crop_id": "mustard",
+    "region_id": "semi_arid_north",
+    "state_coverage": ["Rajasthan", "Haryana"],
+    "soil_type": "Light Alluvial Sandy Loam",
+    "target_yield_min": 15,
+    "target_yield_max": 30,
+    "equation_N": {
+      "formula": "FN (kg/ha) = 4.70 * T - 0.28 * SN",
+      "a_coeff": 4.70,
+      "b_coeff": 0.28
+    },
+    "equation_P2O5": {
+      "formula": "FP2O5 (kg/ha) = 3.10 * T - 0.42 * SP",
+      "a_coeff": 3.10,
+      "b_coeff": 0.42
+    },
+    "equation_K2O": {
+      "formula": "FK2O (kg/ha) = 1.25 * T - 0.12 * SK",
+      "a_coeff": 1.25,
+      "b_coeff": 0.12
+    },
+    "stage_split": {
+      "basal": { "n_ratio": 0.50, "p_ratio": 1.0, "k_ratio": 1.0 },
+      "first_topdress": { "n_ratio": 0.50, "p_ratio": 0.0, "k_ratio": 0.0 }
+    },
+    "micronutrient_guidance": "Apply Elemental Sulphur or Bentonite Sulphur @ 20-30 kg/ha or use SSP as P source.",
+    "source_id": "SRC_ICAR_IISS",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "equation_id": "STCR_COTTON_BLACK_SOIL_PENDING",
+    "crop_id": "cotton",
+    "region_id": "deccan_plateau",
+    "state_coverage": ["Maharashtra", "Gujarat", "Telangana"],
+    "soil_type": "Medium to Deep Black Clay (Vertisols)",
+    "target_yield_min": 20,
+    "target_yield_max": 35,
+    "equation_N": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "equation_P2O5": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "equation_K2O": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "stage_split": {
+      "basal": { "n_ratio": 0.20, "p_ratio": 1.0, "k_ratio": 1.0 },
+      "first_topdress": { "n_ratio": 0.40, "p_ratio": 0.0, "k_ratio": 0.0 }
+    },
+    "micronutrient_guidance": "Foliar spray of MgSO4 (1%) + 19:19:19 (1%) at flowering.",
+    "source_id": "SRC_ICAR_IISS",
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "equation_id": "STCR_GRAM_CENTRAL_PENDING",
+    "crop_id": "gram",
+    "region_id": "central_zone",
+    "state_coverage": ["Madhya Pradesh", "Rajasthan"],
+    "soil_type": "Medium Black / Vertic Inceptisols",
+    "target_yield_min": 15,
+    "target_yield_max": 28,
+    "equation_N": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "equation_P2O5": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "equation_K2O": {
+      "formula": "Equation calibration pending verified ICAR-IISS regional publication",
+      "a_coeff": 0,
+      "b_coeff": 0
+    },
+    "stage_split": {
+      "basal": { "n_ratio": 1.0, "p_ratio": 1.0, "k_ratio": 1.0 },
+      "first_topdress": { "n_ratio": 0.0, "p_ratio": 0.0, "k_ratio": 0.0 }
+    },
+    "micronutrient_guidance": "Basal Sulphur @ 20 kg/ha via Gypsum.",
+    "source_id": "SRC_ICAR_IISS",
+    "verification_status": "PENDING_VERIFICATION"
+  }
+]

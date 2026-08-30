@@ -1,0 +1,119 @@
+{
+  "crop_id": "mustard",
+  "crop_name_en": "Mustard / Rapeseed",
+  "crop_name_hi": "सरसों",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_MAIN"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Treatment",
+      "stage_name_hi": "1. बीज चयन एवं उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Sow in good residual conserved moisture.",
+      "nutrient_guidance": "Seed treatment with Trichoderma @ 6g/kg or Apron 35SD for white rust/damping off.",
+      "pest_disease_scouting": "Check seed purity (>98%) and bold grain size.",
+      "precautions": "Use certified varieties (e.g. RH 749, Pusa Mustard 25, Giriraj).",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Basal Sulphur",
+      "stage_name_hi": "2. खेत की तैयारी एवं बेसल सल्फर",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Conserve subsoil moisture through planking immediately after ploughing.",
+      "nutrient_guidance": "Basal application of FYM (5 t/ha) + Single Super Phosphate (SSP) for phosphorus & sulphur + full K and 50% N.",
+      "pest_disease_scouting": "Check for soil insects (painted bug).",
+      "precautions": "Sulphur (20-30 kg/ha via SSP or Bentonite Sulphur) is essential for oil synthesis in mustard.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Sowing & Thinning",
+      "stage_name_hi": "3. बुवाई एवं विरलीकरण (Thinning)",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Sow at 3-4 cm shallow depth in moist soil.",
+      "nutrient_guidance": "Band placement of basal fertilizers.",
+      "pest_disease_scouting": "Watch for painted bug on newly emerging seedlings.",
+      "precautions": "Maintain 30x10-15 cm row and plant geometry.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Germination & Thinning Out",
+      "stage_name_hi": "4. अंकुरण एवं छंटाई (विरलीकरण)",
+      "duration_days": "Day 7 - 20",
+      "irrigation_guidance": "No irrigation needed if emergence is healthy.",
+      "nutrient_guidance": "No top-dress at seedling stage.",
+      "pest_disease_scouting": "Scout for painted bug (Bagrada cruciferarum) and flea beetles.",
+      "precautions": "Crucial thinning at 15-20 DAS: leave only 1 healthy plant per hill to avoid overcrowding.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Vegetative & Branching",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि एवं शाखाएं निकलना",
+      "duration_days": "Day 25 - 45",
+      "irrigation_guidance": "1st irrigation at 28-35 DAS (pre-flowering stage); vital for branching.",
+      "nutrient_guidance": "Top-dress remaining 50% Nitrogen (Urea) immediately after 1st irrigation.",
+      "pest_disease_scouting": "Scout for Mustard Aphid (Lipaphis erysimi) colonies on tender growing tips and white rust pustules.",
+      "precautions": "Weed the field before 1st irrigation.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Flowering Stage",
+      "stage_name_hi": "6. फूल आने की अवस्था",
+      "duration_days": "Day 45 - 70",
+      "irrigation_guidance": "Avoid heavy flood irrigation during peak bloom to prevent flower drop.",
+      "nutrient_guidance": "Foliar spray of 19:19:19 @ 1% or water soluble Boron @ 0.1%.",
+      "pest_disease_scouting": "Intensive aphid scouting; count aphids per 10 cm central twig (ETL: 25-30 aphids/twig).",
+      "precautions": "Protect honeybees during peak morning pollination hours.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Siliqua / Pod Formation & Grain Filling",
+      "stage_name_hi": "7. फलियां (सिलिकुआ) बनना व दाना भराव",
+      "duration_days": "Day 70 - 95",
+      "irrigation_guidance": "2nd irrigation at pod development stage (65-75 DAS).",
+      "nutrient_guidance": "Foliar spray of 0:0:50 (Potassium sulphate) @ 1% for seed test weight.",
+      "pest_disease_scouting": "Scout for Sclerotinia stem rot and Alternaria black blight on pods.",
+      "precautions": "Irrigate on windless evenings to prevent lodging.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Physiological Maturity",
+      "stage_name_hi": "8. परिपक्वता (फलियों का पीला होना)",
+      "duration_days": "Day 100 - 125",
+      "irrigation_guidance": "Stop irrigation.",
+      "nutrient_guidance": "No fertilizer.",
+      "pest_disease_scouting": "Check for pod shattering risk.",
+      "precautions": "Harvest when 75-80% pods turn bright yellow/golden to prevent pod shattering.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Threshing",
+      "stage_name_hi": "9. कटाई एवं मड़ाई",
+      "duration_days": "Day 115 - 135",
+      "irrigation_guidance": "Dry field.",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Inspect harvested seed for moisture.",
+      "precautions": "Harvest in early morning hours when pods are moist with dew to avoid seed shattering.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest Drying & Storage",
+      "stage_name_hi": "10. कटाई उपरांत सुखाना एवं भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Scout for storage molds and rancidity.",
+      "precautions": "Sun dry seeds until moisture is <= 8% to preserve high oil content and prevent rancidity.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    }
+  ]
+}

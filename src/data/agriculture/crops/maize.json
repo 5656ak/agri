@@ -1,0 +1,119 @@
+{
+  "crop_id": "maize",
+  "crop_name_en": "Maize / Corn",
+  "crop_name_hi": "मक्का",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_MAIN"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Treatment",
+      "stage_name_hi": "1. बीज चयन एवं उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Sow in well-drained moist seedbed.",
+      "nutrient_guidance": "Seed treatment with Azotobacter & PSB biofertilizer + Thiram @ 2g/kg seed.",
+      "pest_disease_scouting": "Check for seed rot fungi.",
+      "precautions": "Use certified hybrids (e.g. Pusa HM 4, HQPM 1, Bio 9681).",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Ridging",
+      "stage_name_hi": "2. खेत की तैयारी एवं मेड़ बनाना",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Pre-sowing irrigation.",
+      "nutrient_guidance": "FYM @ 10 t/ha + full P2O5, full K2O, Zinc Sulphate @ 25 kg/ha, and 1/3rd N basal.",
+      "pest_disease_scouting": "Check for soil grubs and cutworms.",
+      "precautions": "Ensure excellent field drainage; maize cannot tolerate waterlogging even for 6 hours.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Sowing & Spacing",
+      "stage_name_hi": "3. बुवाई",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Maintain soil moisture at 4-5 cm depth.",
+      "nutrient_guidance": "Place basal fertilizer 5 cm away from seed furrow.",
+      "pest_disease_scouting": "Scout for bird pickings.",
+      "precautions": "Sow on ridges at 60x20 cm spacing.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Seedling Emergence (V2 - V4)",
+      "stage_name_hi": "4. अंकुरण एवं प्रारंभिक अवस्था",
+      "duration_days": "Day 7 - 18",
+      "irrigation_guidance": "Light irrigation if topsoil dries out.",
+      "nutrient_guidance": "No top-dress at emergence.",
+      "pest_disease_scouting": "Scout central whorls for Fall Armyworm (Spodoptera frugiperda) pinholes and sawdust-like frass.",
+      "precautions": "Thin out extra seedlings at 12-15 DAS to keep 1 healthy plant per hill.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Knee-High Vegetative Stage (V6 - V8)",
+      "stage_name_hi": "5. घुटने के बराबर अवस्था (Knee-high Stage)",
+      "duration_days": "Day 25 - 40",
+      "irrigation_guidance": "Crucial irrigation at knee-high stage (30-35 DAS).",
+      "nutrient_guidance": "1st Top-dressing of 1/3rd Nitrogen (Urea) along with earthing-up.",
+      "pest_disease_scouting": "Intensive scouting for Fall Armyworm (FAW) in the leaf whorl and Stem Borer (Chilo partellus).",
+      "precautions": "Apply whorl application of bio-agents (Metarhizium anisopliae) or neem formulation if FAW is detected.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Tasseling & Silking Stage",
+      "stage_name_hi": "6. नर मंजरी (Tassel) व भुट्टे के बाल (Silk) निकलना",
+      "duration_days": "Day 45 - 65",
+      "irrigation_guidance": "Most sensitive critical irrigation stage; drought at silking causes blank cobs.",
+      "nutrient_guidance": "2nd Top-dressing of remaining 1/3rd Nitrogen before tasseling.",
+      "pest_disease_scouting": "Scout for Maydis leaf blight and Banded leaf & sheath blight (BLSB).",
+      "precautions": "Never let crop experience water stress during silking.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Grain Filling (Milky to Dough Stage)",
+      "stage_name_hi": "7. दाना भराव (दूधिया से ठोस दाना अवस्था)",
+      "duration_days": "Day 65 - 85",
+      "irrigation_guidance": "Irrigate to support grain expansion and cob filling.",
+      "nutrient_guidance": "Optional 0:0:50 foliar spray @ 1% for cob grain weight.",
+      "pest_disease_scouting": "Scout for Corn earworm and cob rot fungi.",
+      "precautions": "Ensure field drainage during monsoon downpours.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Physiological Maturity (Black Layer Formation)",
+      "stage_name_hi": "8. परिपक्वता (दाने के आधार पर ब्लैक लेयर बनना)",
+      "duration_days": "Day 85 - 105",
+      "irrigation_guidance": "Stop irrigation.",
+      "nutrient_guidance": "No fertilizer.",
+      "pest_disease_scouting": "Check for cob droop and husk drying.",
+      "precautions": "Black layer at the grain tip indicates complete translocation of carbohydrates.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Cob Dehusking",
+      "stage_name_hi": "9. कटाई एवं भुट्टे तोड़ना",
+      "duration_days": "Day 95 - 115",
+      "irrigation_guidance": "Dry field.",
+      "nutrient_guidance": "In-situ shredding of green maize stalks for soil organic carbon.",
+      "pest_disease_scouting": "Inspect harvested cobs for Aspergillus flavus mold.",
+      "precautions": "Harvest cobs when outer husks turn papery dry and grains are hard.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Shelling, Drying & Storage",
+      "stage_name_hi": "10. दाना निकालना, सुखाना एवं भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Scout for Maize weevil (Sitophilus zeamais) and grain moisture.",
+      "precautions": "Dry grains to <= 12% moisture to prevent aflatoxin contamination.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    }
+  ]
+}

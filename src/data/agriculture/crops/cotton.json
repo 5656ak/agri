@@ -1,0 +1,119 @@
+{
+  "crop_id": "cotton",
+  "crop_name_en": "Cotton",
+  "crop_name_hi": "कपास",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_MAIN"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Selection & Acid Delinting/Treatment",
+      "stage_name_hi": "1. बीज चयन एवं बीजोपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Sow in well-prepared moist seedbed.",
+      "nutrient_guidance": "Treat delinted seeds with Trichoderma viride @ 5g/kg or Imidacloprid (seed dressing) for early sucking pest protection.",
+      "pest_disease_scouting": "Check for seed germination percentage (>75%).",
+      "precautions": "Ensure certified hybrid/Bt cotton seed packet with refuge seed component.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Deep Ploughing",
+      "stage_name_hi": "2. खेत की गहरी जुताई एवं तैयारी",
+      "duration_days": "Day 1 - 10",
+      "irrigation_guidance": "Pre-sowing irrigation (Paleva) to ensure root zone moisture.",
+      "nutrient_guidance": "Incorporate FYM @ 10 t/ha + Basal full P, full K, and 20% N.",
+      "pest_disease_scouting": "Scout for previous season pink bollworm carryover larvae in field debris.",
+      "precautions": "Deep summer ploughing to expose pupae of bollworms and root-rot fungi.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Sowing & Dibbling",
+      "stage_name_hi": "3. बुवाई एवं डिबलिंग",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Moist soil at 4-5 cm depth.",
+      "nutrient_guidance": "Basal fertilizer placement in bands 5 cm away from seed line.",
+      "pest_disease_scouting": "Check for uniform germination lines.",
+      "precautions": "Maintain 90x60 cm or 67.5x60 cm spacing depending on variety and soil type.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Germination & Gap Filling",
+      "stage_name_hi": "4. अंकुरण एवं गैप फिलिंग",
+      "duration_days": "Day 7 - 15",
+      "irrigation_guidance": "No irrigation needed if germination is uniform.",
+      "nutrient_guidance": "No top-dressing at this early stage.",
+      "pest_disease_scouting": "Scout for thrips and jassids curling seedling cotyledons.",
+      "precautions": "Perform gap filling within 10 days of sowing to ensure plant population.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Vegetative & Squaring (Square Formation)",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि एवं कलियां (स्क्वायर) बनना",
+      "duration_days": "Day 30 - 60",
+      "irrigation_guidance": "Irrigate at 12-15 day intervals; do not cause waterlogging.",
+      "nutrient_guidance": "1st Top-dressing of Nitrogen (Urea) at squaring (40-45 DAS).",
+      "pest_disease_scouting": "Intense scouting for Whitefly, Jassids, and early Pink Bollworm (PBW) rosetted flowers.",
+      "precautions": "Install yellow sticky traps @ 10/acre for whitefly monitoring.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Peak Flowering",
+      "stage_name_hi": "6. मुख्य पुष्पन अवस्था",
+      "duration_days": "Day 60 - 85",
+      "irrigation_guidance": "Critical moisture stage; water stress causes severe square and flower drop.",
+      "nutrient_guidance": "2nd Top-dressing of Nitrogen + Magnesium Sulphate (1%) and 19:19:19 foliar spray.",
+      "pest_disease_scouting": "Install Pheromone traps (Pectino-lure) @ 5/acre for Pink Bollworm moth monitoring.",
+      "precautions": "Scout 20 green flowers per acre; if >5% show 'rosetted flower' symptom, trigger IPM.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Boll Development & Maturation",
+      "stage_name_hi": "7. टिंडे (बोल्स) बनना व विकास",
+      "duration_days": "Day 85 - 125",
+      "irrigation_guidance": "Ensure regular furrow moisture; avoid standing water on root collars.",
+      "nutrient_guidance": "Foliar spray of Potassium Nitrate (13:0:45) @ 1.5% and Boron (0.1%) to enhance boll weight.",
+      "pest_disease_scouting": "Destructive sampling of green bolls: check for Pink Bollworm internal bore entry and boll rot.",
+      "precautions": "Avoid excess nitrogen late in season which delays boll maturity and attracts sucking pests.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Boll Bursting & Fluffing",
+      "stage_name_hi": "8. टिंडे खुलना (बोल्स फटना)",
+      "duration_days": "Day 125 - 155",
+      "irrigation_guidance": "Gradually reduce irrigation frequency; stop prior to peak picking.",
+      "nutrient_guidance": "No fertilizer application.",
+      "pest_disease_scouting": "Check for stained or discolored lint caused by red cotton bugs (Dysdercus koenigii).",
+      "precautions": "Ensure bolls open under dry sunshine to avoid fiber staining.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Picking / Harvesting",
+      "stage_name_hi": "9. कपास की चुनाई",
+      "duration_days": "Day 140 - 170 (2-3 Pickings)",
+      "irrigation_guidance": "Dry field conditions.",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Separate PBW damaged/stained locules from clean white seed cotton.",
+      "precautions": "Pick cotton after dew has evaporated; avoid trash, dried leaves, or polypropylene fiber contamination.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest, Ginning & Storage",
+      "stage_name_hi": "10. कटाई उपरांत प्रबंधन एवं सुरक्षित भंडारण",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Destroy cotton stalks with rotavator/mulcher to break pink bollworm diapausing cycle.",
+      "precautions": "Store picked seed cotton (Kapas) in clean dry room with <=8% moisture.",
+      "source_ids": ["SRC_ICAR_MAIN"]
+    }
+  ]
+}

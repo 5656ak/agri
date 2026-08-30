@@ -1,0 +1,72 @@
+[
+  {
+    "kvk_id": "KVK_HARYANA_KARNAL",
+    "name": "Krishi Vigyan Kendra, NDRI Karnal",
+    "state": "Haryana",
+    "district": "Karnal",
+    "host_organization": "ICAR-National Dairy Research Institute",
+    "phone": "1800-180-1551 (Kisan Call Center Toll-Free)",
+    "email": "kvk.karnal@icar.gov.in",
+    "address": "NDRI Campus, Karnal - 132001, Haryana",
+    "latitude": 29.6857,
+    "longitude": 76.9905,
+    "source_id": "SRC_KVK_NETWORK",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "kvk_id": "KVK_PUNJAB_LUDHIANA",
+    "name": "Krishi Vigyan Kendra, Ludhiana",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "host_organization": "Punjab Agricultural University (PAU)",
+    "phone": "1800-180-1551 (Kisan Call Center Toll-Free)",
+    "email": "kvk_ldh@pau.edu",
+    "address": "PAU Campus, Ferozepur Road, Ludhiana - 141004, Punjab",
+    "latitude": 30.9010,
+    "longitude": 75.8573,
+    "source_id": "SRC_KVK_NETWORK",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "kvk_id": "KVK_UP_MEERUT",
+    "name": "Krishi Vigyan Kendra, Hastinapur (Meerut)",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "host_organization": "Sardar Vallabhbhai Patel University of Agriculture & Technology",
+    "phone": "1800-180-1551 (Kisan Call Center Toll-Free)",
+    "email": "kvk.meerut@gov.in",
+    "address": "Hastinapur, Meerut - 250404, Uttar Pradesh",
+    "latitude": 29.1700,
+    "longitude": 77.9900,
+    "source_id": "SRC_KVK_NETWORK",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "kvk_id": "KVK_RAJASTHAN_JAIPUR",
+    "name": "Krishi Vigyan Kendra, Chomu (Jaipur)",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "host_organization": "SKN Agriculture University, Jobner",
+    "phone": "1800-180-1551 (Kisan Call Center Toll-Free)",
+    "email": "kvk.jaipur@sknau.ac.in",
+    "address": "Chomu, Jaipur - 303702, Rajasthan",
+    "latitude": 27.1700,
+    "longitude": 75.7200,
+    "source_id": "SRC_KVK_NETWORK",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "kvk_id": "KVK_MP_BHOPAL",
+    "name": "Krishi Vigyan Kendra, Nabibagh (Bhopal)",
+    "state": "Madhya Pradesh",
+    "district": "Bhopal",
+    "host_organization": "ICAR-Central Institute of Agricultural Engineering (CIAE)",
+    "phone": "1800-180-1551 (Kisan Call Center Toll-Free)",
+    "email": "kvk.bhopal@icar.gov.in",
+    "address": "Nabibagh, Berasia Road, Bhopal - 462038, Madhya Pradesh",
+    "latitude": 23.3100,
+    "longitude": 77.4100,
+    "source_id": "SRC_KVK_NETWORK",
+    "verification_status": "VERIFIED"
+  }
+]

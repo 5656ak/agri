@@ -1,0 +1,122 @@
+[
+  {
+    "crop_id": "wheat",
+    "name_en": "Wheat",
+    "name_hi": "गेहूं",
+    "botanical_name": "Triticum aestivum",
+    "category": "Cereal",
+    "season": "Rabi",
+    "typical_duration": {
+      "min_days": 120,
+      "max_days": 145
+    },
+    "supported_states": ["Punjab", "Haryana", "Uttar Pradesh", "Madhya Pradesh", "Rajasthan", "Bihar"],
+    "source_ids": ["SRC_ICAR_IIWBR", "SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "rice",
+    "name_en": "Rice / Paddy",
+    "name_hi": "धान (चावल)",
+    "botanical_name": "Oryza sativa",
+    "category": "Cereal",
+    "season": "Kharif",
+    "typical_duration": {
+      "min_days": 115,
+      "max_days": 150
+    },
+    "supported_states": ["Punjab", "Haryana", "West Bengal", "Uttar Pradesh", "Andhra Pradesh", "Tamil Nadu", "Odisha", "Bihar"],
+    "source_ids": ["SRC_ICAR_IIRR", "SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "cotton",
+    "name_en": "Cotton",
+    "name_hi": "कपास",
+    "botanical_name": "Gossypium hirsutum",
+    "category": "Cash Crop",
+    "season": "Kharif",
+    "typical_duration": {
+      "min_days": 150,
+      "max_days": 180
+    },
+    "supported_states": ["Gujarat", "Maharashtra", "Telangana", "Haryana", "Punjab", "Rajasthan"],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "tomato",
+    "name_en": "Tomato",
+    "name_hi": "टमाटर",
+    "botanical_name": "Solanum lycopersicum",
+    "category": "Vegetable",
+    "season": "Rabi/Kharif",
+    "typical_duration": {
+      "min_days": 90,
+      "max_days": 120
+    },
+    "supported_states": ["Madhya Pradesh", "Andhra Pradesh", "Karnataka", "Maharashtra", "Odisha", "Gujarat", "Haryana"],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "potato",
+    "name_en": "Potato",
+    "name_hi": "आलू",
+    "botanical_name": "Solanum tuberosum",
+    "category": "Vegetable",
+    "season": "Rabi",
+    "typical_duration": {
+      "min_days": 90,
+      "max_days": 120
+    },
+    "supported_states": ["Uttar Pradesh", "West Bengal", "Bihar", "Gujarat", "Madhya Pradesh", "Punjab"],
+    "source_ids": ["SRC_ICAR_CPRI"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "mustard",
+    "name_en": "Mustard / Rapeseed",
+    "name_hi": "सरसों",
+    "botanical_name": "Brassica juncea",
+    "category": "Oilseed",
+    "season": "Rabi",
+    "typical_duration": {
+      "min_days": 110,
+      "max_days": 135
+    },
+    "supported_states": ["Rajasthan", "Haryana", "Madhya Pradesh", "Uttar Pradesh", "West Bengal"],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "maize",
+    "name_en": "Maize / Corn",
+    "name_hi": "मक्का",
+    "botanical_name": "Zea mays",
+    "category": "Cereal",
+    "season": "Kharif/Rabi",
+    "typical_duration": {
+      "min_days": 85,
+      "max_days": 115
+    },
+    "supported_states": ["Karnataka", "Madhya Pradesh", "Maharashtra", "Tamil Nadu", "Bihar", "Telangana"],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  },
+  {
+    "crop_id": "gram",
+    "name_en": "Gram / Chickpea",
+    "name_hi": "चना",
+    "botanical_name": "Cicer arietinum",
+    "category": "Pulse",
+    "season": "Rabi",
+    "typical_duration": {
+      "min_days": 100,
+      "max_days": 125
+    },
+    "supported_states": ["Madhya Pradesh", "Maharashtra", "Rajasthan", "Uttar Pradesh", "Karnataka"],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "data_status": "VERIFIED"
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "STCREquationSchema",
+  "type": "object",
+  "required": [
+    "equation_id",
+    "crop_id",
+    "region_id",
+    "state_coverage",
+    "soil_type",
+    "target_yield_min",
+    "target_yield_max",
+    "equation_N",
+    "equation_P2O5",
+    "equation_K2O",
+    "stage_split",
+    "source_id",
+    "verification_status"
+  ],
+  "properties": {
+    "equation_id": { "type": "string" },
+    "crop_id": { "type": "string" },
+    "region_id": { "type": "string" },
+    "state_coverage": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "soil_type": { "type": "string" },
+    "target_yield_min": { "type": "number" },
+    "target_yield_max": { "type": "number" },
+    "equation_N": {
+      "type": "object",
+      "required": ["formula", "a_coeff", "b_coeff"],
+      "properties": {
+        "formula": { "type": "string" },
+        "a_coeff": { "type": "number" },
+        "b_coeff": { "type": "number" }
+      }
+    },
+    "equation_P2O5": {
+      "type": "object",
+      "required": ["formula", "a_coeff", "b_coeff"],
+      "properties": {
+        "formula": { "type": "string" },
+        "a_coeff": { "type": "number" },
+        "b_coeff": { "type": "number" }
+      }
+    },
+    "equation_K2O": {
+      "type": "object",
+      "required": ["formula", "a_coeff", "b_coeff"],
+      "properties": {
+        "formula": { "type": "string" },
+        "a_coeff": { "type": "number" },
+        "b_coeff": { "type": "number" }
+      }
+    },
+    "stage_split": {
+      "type": "object",
+      "required": ["basal", "first_topdress"],
+      "properties": {
+        "basal": {
+          "type": "object",
+          "properties": {
+            "n_ratio": { "type": "number" },
+            "p_ratio": { "type": "number" },
+            "k_ratio": { "type": "number" }
+          }
+        },
+        "first_topdress": {
+          "type": "object",
+          "properties": {
+            "n_ratio": { "type": "number" },
+            "p_ratio": { "type": "number" },
+            "k_ratio": { "type": "number" }
+          }
+        },
+        "second_topdress": {
+          "type": "object",
+          "properties": {
+            "n_ratio": { "type": "number" },
+            "p_ratio": { "type": "number" },
+            "k_ratio": { "type": "number" }
+          }
+        }
+      }
+    },
+    "micronutrient_guidance": { "type": ["string", "null"] },
+    "source_id": { "type": "string" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "DEMO", "PENDING_VERIFICATION"]
+    }
+  }
+}

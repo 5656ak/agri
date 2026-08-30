@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DiseaseKnowledgeSchema",
+  "type": "object",
+  "required": [
+    "disease_id",
+    "crop_id",
+    "disease_name_en",
+    "disease_name_hi",
+    "category",
+    "verification_status"
+  ],
+  "properties": {
+    "disease_id": { "type": "string" },
+    "crop_id": { "type": "string" },
+    "disease_name_en": { "type": "string" },
+    "disease_name_hi": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["Fungal", "Bacterial", "Viral", "Pest_Damage", "Nutrient_Deficiency", "Physiological_Disorder"]
+    },
+    "pathogen": { "type": ["string", "null"] },
+    "symptoms_en": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "symptoms_hi": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "differential_diagnosis": {
+      "type": ["string", "null"]
+    },
+    "cultural_management": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "biological_organic_management": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "chemical_management_reference_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "DEMO", "PENDING_VERIFICATION"]
+    }
+  }
+}

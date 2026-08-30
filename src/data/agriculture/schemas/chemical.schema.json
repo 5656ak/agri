@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIBRCChemicalRegistrySchema",
+  "type": "object",
+  "required": [
+    "chemical_id",
+    "active_ingredient",
+    "formulation",
+    "crop_id",
+    "target_condition_ids",
+    "dosage",
+    "dilution",
+    "application_method",
+    "phi_waiting_period_days",
+    "safety_precautions",
+    "source_id",
+    "verification_status"
+  ],
+  "properties": {
+    "chemical_id": { "type": "string" },
+    "active_ingredient": { "type": "string" },
+    "formulation": { "type": "string" },
+    "crop_id": { "type": "string" },
+    "target_condition_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dosage": {
+      "type": "object",
+      "required": ["per_acre", "per_hectare"],
+      "properties": {
+        "per_acre": { "type": "string" },
+        "per_hectare": { "type": "string" }
+      }
+    },
+    "dilution": { "type": "string" },
+    "application_method": { "type": "string" },
+    "phi_waiting_period_days": { "type": "number" },
+    "safety_precautions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_id": { "type": "string" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "DEMO", "PENDING_VERIFICATION"]
+    },
+    "last_verified_date": { "type": "string" }
+  }
+}

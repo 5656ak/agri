@@ -1,0 +1,621 @@
+[
+  {
+    "disease_id": "DIS_WHEAT_YELLOW_RUST",
+    "crop_id": "wheat",
+    "disease_name_en": "Yellow Rust (Stripe Rust)",
+    "disease_name_hi": "पीला रतुआ (स्ट्राइप रस्ट)",
+    "category": "Fungal",
+    "pathogen": "Puccinia striiformis f. sp. tritici",
+    "symptoms_en": [
+      "Yellow to orange uredinial pustules arranged in parallel linear stripes on leaf blades",
+      "Yellow powdery spores rubbing off on fingers when touched",
+      "Chlorotic yellowing spreading along leaf veins"
+    ],
+    "symptoms_hi": [
+      "पत्तियों की सतह पर समानांतर धारियों में पीले रंग के फफोले (Pustules)",
+      "उंगली से छूने पर पीला चूर्ण/पाउडर जैसा पदार्थ लगना",
+      "पत्तियों का पीला पड़ना व पत्तियों की नसों के साथ संक्रमण फैलना"
+    ],
+    "differential_diagnosis": "Brown Leaf Rust pustules are scattered randomly on the leaf surface, whereas Yellow Rust forms distinct linear stripes.",
+    "cultural_management": [
+      "Adopt resistant cultivars recommended for northern plains (e.g., HD 3086, DBW 187, DBW 222)",
+      "Avoid excessive nitrogenous fertilization beyond Soil Test recommendations",
+      "Eradicate volunteer grass weed hosts around field borders"
+    ],
+    "biological_organic_management": [
+      "Foliar spray of Trichoderma viride or neem-based formulations at initial symptom onset"
+    ],
+    "chemical_management_reference_ids": ["CHEM_PROPICONAZOLE_25EC"],
+    "source_ids": ["SRC_ICAR_IIWBR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_WHEAT_BROWN_RUST",
+    "crop_id": "wheat",
+    "disease_name_en": "Brown Rust (Leaf Rust)",
+    "disease_name_hi": "भूरा रतुआ (पत्ती रतुआ)",
+    "category": "Fungal",
+    "pathogen": "Puccinia triticina",
+    "symptoms_en": [
+      "Small, round to oval, brown pustules scattered randomly on leaf blades without forming stripes"
+    ],
+    "symptoms_hi": [
+      "पत्तियों पर भूरे रंग के छोटे, गोल या अंडाकार फफोले जो बिना किसी धारी के बेतरतीब बिखरे होते हैं"
+    ],
+    "differential_diagnosis": "Distinguished from Yellow Rust by random scattered distribution rather than linear stripes.",
+    "cultural_management": ["Grow recommended rust-resistant varieties."],
+    "biological_organic_management": ["Spray bio-formulations upon early detection."],
+    "chemical_management_reference_ids": ["CHEM_PROPICONAZOLE_25EC"],
+    "source_ids": ["SRC_ICAR_IIWBR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_WHEAT_POWDERY_MILDEW",
+    "crop_id": "wheat",
+    "disease_name_en": "Powdery Mildew",
+    "disease_name_hi": "चूर्णिल आसिता (पाउडरी मिल्ड्यू)",
+    "category": "Fungal",
+    "pathogen": "Blumeria graminis f. sp. tritici",
+    "symptoms_en": [
+      "White to greyish powdery fungal patches on upper surface of leaves and leaf sheaths"
+    ],
+    "symptoms_hi": [
+      "पत्तियों और तनों की ऊपरी सतह पर सफेद या भूरे रंग के चूर्ण जैसे धब्बे"
+    ],
+    "differential_diagnosis": "Superficial white powdery growth on leaf surface, unlike internal pustules of rusts.",
+    "cultural_management": ["Avoid high crop density and excessive nitrogen application."],
+    "biological_organic_management": ["Foliar spray of wettable sulfur in compliant dosages."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIWBR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_WHEAT_KARNAL_BUNT",
+    "crop_id": "wheat",
+    "disease_name_en": "Karnal Bunt",
+    "disease_name_hi": "करनाल बंट",
+    "category": "Fungal",
+    "pathogen": "Tilletia indica",
+    "symptoms_en": [
+      "Partial conversion of wheat kernels into black powdery teliospore masses with fishy smell (trimethylamine)"
+    ],
+    "symptoms_hi": [
+      "दाने का आंशिक रूप से काले चूर्ण में बदलना और सड़ी मछली जैसी दुर्गंध आना"
+    ],
+    "differential_diagnosis": "Only partial browning/blackening of grain embryo, distinct from loose smut where whole earhead is destroyed.",
+    "cultural_management": ["Avoid excessive irrigation during flowering window in endemic areas."],
+    "biological_organic_management": ["Seed treatment with Trichoderma viride."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIWBR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_RICE_BLAST",
+    "crop_id": "rice",
+    "disease_name_en": "Rice Blast (Leaf & Neck Blast)",
+    "disease_name_hi": "धान का झुलसा / ब्लास्ट रोग",
+    "category": "Fungal",
+    "pathogen": "Magnaporthe oryzae (Pyricularia oryzae)",
+    "symptoms_en": [
+      "Spindle-shaped / eye-shaped lesions on leaves with brown/dark margins and grey-white centers",
+      "Blackening of neck node causing empty chaffy panicles (Neck blast)"
+    ],
+    "symptoms_hi": [
+      "पत्तियों पर नाव या आंख के आकार के धब्बे जिनके किनारे भूरे और केंद्र स्लेटी-सफेद होते हैं",
+      "बालियों की गर्दन काली पड़ना जिससे दाने नहीं भरते (गर्दन तोड़ ब्लास्ट)"
+    ],
+    "differential_diagnosis": "Spindle-shaped lesions with ash-grey center are unique to blast, unlike rectangular brown spots of Helminthosporium.",
+    "cultural_management": ["Avoid excessive split application of nitrogen in blast-prone humid conditions."],
+    "biological_organic_management": ["Seed treatment with Pseudomonas fluorescens @ 10g/kg."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIRR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_RICE_BACTERIAL_BLIGHT",
+    "crop_id": "rice",
+    "disease_name_en": "Bacterial Leaf Blight (BLB)",
+    "disease_name_hi": "जीवाणु पत्ती झुलसा (बी.एल.बी)",
+    "category": "Bacterial",
+    "pathogen": "Xanthomonas oryzae pv. oryzae",
+    "symptoms_en": [
+      "Water-soaked yellowish-green wavy lesions starting from leaf tip and margins progressing downwards",
+      "Bacterial ooze droplets visible on infected leaf margins in early morning"
+    ],
+    "symptoms_hi": [
+      "पत्ती के सिरे और किनारों से शुरू होकर नीचे की ओर बढ़ने वाले पीले-सफेद लहरदार धब्बे",
+      "सुबह के समय पत्ती के किनारों पर जीवाणु की चिपचिपी बूंदें दिखना"
+    ],
+    "differential_diagnosis": "Wavy margins and bacterial oozing distinguish BLB from fungal leaf streak.",
+    "cultural_management": ["Drain excess field water; avoid clipping seedling tips at transplanting."],
+    "biological_organic_management": ["Foliar application of fresh cow dung slurry extract (20%) or Pseudomonas fluorescens."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIRR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_RICE_SHEATH_BLIGHT",
+    "crop_id": "rice",
+    "disease_name_en": "Sheath Blight",
+    "disease_name_hi": "शीथ ब्लाइट (तने का झुलसा)",
+    "category": "Fungal",
+    "pathogen": "Rhizoctonia solani",
+    "symptoms_en": [
+      "Oval or snake-skin like greenish-grey spots on leaf sheaths near the water level with irregular margins"
+    ],
+    "symptoms_hi": [
+      "जल स्तर के पास तनों (शीथ) पर सांप की केंचुली जैसे स्लेटी-हरे अनियमित धब्बे"
+    ],
+    "differential_diagnosis": "Lesions originate at water line on leaf sheaths, unlike leaf blast occurring on foliage.",
+    "cultural_management": ["Maintain optimum plant spacing and balanced potash application to harden cell walls."],
+    "biological_organic_management": ["Soil application of Trichoderma viride enriched FYM."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIRR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_RICE_FALSE_SMUT",
+    "crop_id": "rice",
+    "disease_name_en": "False Smut",
+    "disease_name_hi": "झूठा कंडुवा (फाल्स स्मट / लेढ़ा रोग)",
+    "category": "Fungal",
+    "pathogen": "Ustilaginoidea virens",
+    "symptoms_en": [
+      "Individual grains transformed into large, velvety greenish-yellow spore balls which later turn orange-black"
+    ],
+    "symptoms_hi": [
+      "बालियों के अलग-अलग दानों का पीले-हरे मखमली गोलों में बदल जाना जो बाद में काले हो जाते हैं"
+    ],
+    "differential_diagnosis": "Velvety yellow balls on distinct grains, unlike bunt.",
+    "cultural_management": ["Avoid high nitrogen doses during flowering in high humidity regions."],
+    "biological_organic_management": ["Seed treatment before nursery raising."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIRR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_POTATO_LATE_BLIGHT",
+    "crop_id": "potato",
+    "disease_name_en": "Late Blight",
+    "disease_name_hi": "पछेती झुलसा (लेट ब्लाइट)",
+    "category": "Fungal",
+    "pathogen": "Phytophthora infestans",
+    "symptoms_en": [
+      "Water-soaked, irregular pale-green lesions turning dark brown to black rapidly on leaf tips and margins",
+      "White cottony fungal downy growth on the underside of infected leaves during humid mornings",
+      "Foul rotting odor in severely infected potato canopies"
+    ],
+    "symptoms_hi": [
+      "पत्तियों के सिरों व किनारों पर पानी से भीगे हुए अनियमित धब्बे जो तेजी से काले-भूरे हो जाते हैं",
+      "सुबह के समय पत्तियों की निचली सतह पर सफेद रूई जैसा फफूंद विकास",
+      "खेत में सड़े हुए पौधों की दुर्गंध आना"
+    ],
+    "differential_diagnosis": "Late blight lesions are fast-spreading water-soaked patches with white underleaf mold, unlike Early Blight which has dry concentric target rings.",
+    "cultural_management": [
+      "Use certified disease-free seed tubers (e.g. Kufri Girdhari, Kufri Himalini)",
+      "High earthing-up to prevent motile zoospores reaching developing tubers"
+    ],
+    "biological_organic_management": ["Prophylactic spray of Trichoderma harzianum."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_CPRI"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_POTATO_EARLY_BLIGHT",
+    "crop_id": "potato",
+    "disease_name_en": "Early Blight",
+    "disease_name_hi": "अगेती झुलसा (अर्ली ब्लाइट)",
+    "category": "Fungal",
+    "pathogen": "Alternaria solani",
+    "symptoms_en": [
+      "Dark brown to black necrotic spots with characteristic concentric rings (target board pattern) on older lower leaves"
+    ],
+    "symptoms_hi": [
+      "निचली पुरानी पत्तियों पर गहरे भूरे-काले गोल धब्बे जिनमें गोल चक्र (टारगेट बोर्ड पैटर्न) दिखाई देते हैं"
+    ],
+    "differential_diagnosis": "Concentric target rings in dry lesions distinct from water-soaked non-zoned late blight.",
+    "cultural_management": ["Remove and burn lower infected foliage; avoid overhead sprinkler splashing."],
+    "biological_organic_management": ["Neem seed kernel extract (NSKE 5%) prophylactic spray."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_CPRI"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_POTATO_BLACK_SCURF",
+    "crop_id": "potato",
+    "disease_name_en": "Black Scurf",
+    "disease_name_hi": "काली पपड़ी (ब्लैक स्कर्फ)",
+    "category": "Fungal",
+    "pathogen": "Rhizoctonia solani",
+    "symptoms_en": [
+      "Hard, black, crust-like sclerotial encrustations on the skin of harvested tubers resembling dirt that does not wash off"
+    ],
+    "symptoms_hi": [
+      "कंद की त्वचा पर काले रंग की सख्त पपड़ी या दाने जो धोने पर भी नहीं छूटते"
+    ],
+    "differential_diagnosis": "Black encrustations do not affect internal flesh.",
+    "cultural_management": ["Crop rotation with non-host crops and green manuring with Sesbania."],
+    "biological_organic_management": ["Seed tuber treatment with Trichoderma viride."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_CPRI"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_TOMATO_EARLY_BLIGHT",
+    "crop_id": "tomato",
+    "disease_name_en": "Early Blight",
+    "disease_name_hi": "अगेती झुलसा (अर्ली ब्लाइट)",
+    "category": "Fungal",
+    "pathogen": "Alternaria solani",
+    "symptoms_en": [
+      "Brown to black spots with concentric rings (target board effect) surrounded by yellow chlorotic halo on leaves and stems"
+    ],
+    "symptoms_hi": [
+      "पत्तियों पर गहरे भूरे रंग के चक्राकार धब्बे जिनके चारों ओर पीला घेरा होता है"
+    ],
+    "differential_diagnosis": "Concentric rings differentiate from bacterial spot and Septoria leaf spot.",
+    "cultural_management": ["Prune bottom 30 cm leaves touching the soil; stake tomato plants."],
+    "biological_organic_management": ["Spray Trichoderma or bio-fungicide formulations."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_TOMATO_LEAF_CURL",
+    "crop_id": "tomato",
+    "disease_name_en": "Tomato Leaf Curl Virus (ToLCV)",
+    "disease_name_hi": "टमाटर का पर्ण कुंचन (लीफ कर्ल वायरस / माथा बंधना)",
+    "category": "Viral",
+    "pathogen": "Tomato leaf curl virus (Begomovirus transmitted by Whitefly Bemisia tabaci)",
+    "symptoms_en": [
+      "Upward and downward curling of leaves, puckering, reduction in leaf lamina size, severe stunting and bushy stunted appearance"
+    ],
+    "symptoms_hi": [
+      "पत्तियों का ऊपर व नीचे की ओर मुड़ना, पत्तियों का आकार छोटा होना, पौधे का बौना व झाड़ीदार होना"
+    ],
+    "differential_diagnosis": "Severe curling and leathery thickening transmitted by whiteflies; distinguished from mite feeding by absence of webbing.",
+    "cultural_management": [
+      "Raise nursery under 40-mesh nylon net covers",
+      "Eradicate and bury infected virus-reservoir plants in field early"
+    ],
+    "biological_organic_management": [
+      "Yellow sticky traps @ 15-20/acre to trap whiteflies",
+      "Foliar spray of Neem Oil (10,000 ppm) @ 2 ml/L"
+    ],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_TOMATO_BLOSSOM_END_ROT",
+    "crop_id": "tomato",
+    "disease_name_en": "Blossom End Rot (BER)",
+    "disease_name_hi": "पुष्प छोर विगलन (ब्लॉसम एंड रॉट)",
+    "category": "Physiological_Disorder",
+    "pathogen": null,
+    "symptoms_en": [
+      "Water-soaked dark flattened leathery black spot at the blossom end (base) of developing green tomato fruits"
+    ],
+    "symptoms_hi": [
+      "टमाटर के फल के निचले हिस्से (ब्लॉसम एंड) पर काला चपटा चमड़े जैसा धब्बा पड़ना"
+    ],
+    "differential_diagnosis": "Non-pathogenic physiological disorder caused by Calcium deficiency induced by erratic watering.",
+    "cultural_management": ["Maintain continuous, regular soil moisture; avoid alternate dry and flood cycles."],
+    "biological_organic_management": ["Foliar spray of Calcium Nitrate @ 5g/L at early fruit set."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_COTTON_LEAF_CURL",
+    "crop_id": "cotton",
+    "disease_name_en": "Cotton Leaf Curl Virus (CLCuV)",
+    "disease_name_hi": "कपास का पत्ता मरोड़ रोग (लीफ कर्ल वायरस)",
+    "category": "Viral",
+    "pathogen": "Cotton leaf curl virus (Begomovirus transmitted by Whitefly)",
+    "symptoms_en": [
+      "Upward or downward leaf curling, vein thickening, and enations (small leaf-like cup outgrowths on leaf underside)"
+    ],
+    "symptoms_hi": [
+      "पत्तियों का मुड़ना, नसों का मोटा होना और पत्ती की निचली सतह पर छोटी पत्ती जैसी गांठें (Enations) बनना"
+    ],
+    "differential_diagnosis": "Enations on underleaf veins are the defining diagnostic hallmark of CLCuD.",
+    "cultural_management": ["Grow resistant Bt hybrids; destroy weed hosts like Abutilon indicum (Peeli Booti)."],
+    "biological_organic_management": ["Yellow sticky traps for whitefly management."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_COTTON_BACTERIAL_BLIGHT",
+    "crop_id": "cotton",
+    "disease_name_en": "Bacterial Blight / Angular Leaf Spot",
+    "disease_name_hi": "जीवाणु झुलसा / कोणीय पत्ती धब्बा (ब्लैक आर्म)",
+    "category": "Bacterial",
+    "pathogen": "Xanthomonas citri pv. malvacearum",
+    "symptoms_en": [
+      "Angular water-soaked lesions bounded by leaf veins turning brown-black (Angular leaf spot and Black arm on branches)"
+    ],
+    "symptoms_hi": [
+      "पत्तियों की नसों से घिरे कोणीय (Angular) धब्बे और शाखाओं पर काले घाव (ब्लैक आर्म)"
+    ],
+    "differential_diagnosis": "Angular geometric margins bounded by veins.",
+    "cultural_management": ["Delinting and certified seed treatment."],
+    "biological_organic_management": ["Spray Copper Oxychloride 50 WP as per standard package of practices."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_MUSTARD_WHITE_RUST",
+    "crop_id": "mustard",
+    "disease_name_en": "White Rust / Blister",
+    "disease_name_hi": "सफेद रतुआ (व्हाइट रस्ट / सफेद फफोले)",
+    "category": "Fungal",
+    "pathogen": "Albugo candida",
+    "symptoms_en": [
+      "White or creamy raised blister-like pustules on lower leaf surface; staghead malformation in flowering heads"
+    ],
+    "symptoms_hi": [
+      "पत्तियों की निचली सतह पर सफेद या मलाईदार उभरे हुए फफोले और फूल वाली टहनियों का विकृत (Staghead) होना"
+    ],
+    "differential_diagnosis": "Chalky white blister pustules on leaf underside.",
+    "cultural_management": ["Timely sowing in October before temperature drops; destroy infected floral stagheads."],
+    "biological_organic_management": ["Seed treatment with Trichoderma."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_MUSTARD_ALTERNARIA_BLIGHT",
+    "crop_id": "mustard",
+    "disease_name_en": "Alternaria Leaf & Pod Blight",
+    "disease_name_hi": "अल्टरनेरिया पत्ती व फली झुलसा",
+    "category": "Fungal",
+    "pathogen": "Alternaria brassicae",
+    "symptoms_en": [
+      "Small brown to black circular spots with concentric rings on leaves, stems and developing siliquae (pods)"
+    ],
+    "symptoms_hi": [
+      "पत्तियों और फलियों पर गोल काले-भूरे छल्लेदार धब्बे"
+    ],
+    "differential_diagnosis": "Concentric black spots on pods cause premature seed shattering.",
+    "cultural_management": ["Clean certified seeds; avoid dense sowing."],
+    "biological_organic_management": ["Foliar spray of NSKE (5%)."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_MAIZE_FALL_ARMYWORM",
+    "crop_id": "maize",
+    "disease_name_en": "Fall Armyworm (FAW) Damage",
+    "disease_name_hi": "फॉल आर्मीवर्म (सैनिक कीट क्षति)",
+    "category": "Pest_Damage",
+    "pathogen": "Spodoptera frugiperda (Insect Pest)",
+    "symptoms_en": [
+      "Pinholes and large ragged windowpane leaf tears; heavy sawdust-like fecal frass packed inside central leaf whorl",
+      "Larva has inverted Y-shape mark on head and 4 square spots on 8th abdominal segment"
+    ],
+    "symptoms_hi": [
+      "पत्तियों में गोल छेद व कटे-फटे पत्ते, मक्के के पौधे के केंद्रीय पोंगे (Whorl) में बुरादे जैसा मल भरा होना",
+      "सूंड़ी के सिर पर उल्टा 'Y' का निशान और 8वें खंड पर 4 चौकोर काले धब्बे"
+    ],
+    "differential_diagnosis": "Sawdust-like fecal frass in central whorl and head inverted Y-mark distinct from native stem borer.",
+    "cultural_management": ["Deep summer ploughing; intercropping with cowpea or desmodium."],
+    "biological_organic_management": [
+      "Release of egg parasitoid Trichogramma pretiosum @ 50,000/acre",
+      "Whorl application of neem formulation or Metarhizium anisopliae (5g/L)"
+    ],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_MAIZE_MAYDIS_BLIGHT",
+    "crop_id": "maize",
+    "disease_name_en": "Maydis Leaf Blight",
+    "disease_name_hi": "मेइडिस लीफ ब्लाइट (मक्का पत्ती झुलसा)",
+    "category": "Fungal",
+    "pathogen": "Bipolaris maydis",
+    "symptoms_en": [
+      "Small, elongated rectangular buff-colored necrotic spots between leaf veins with purplish margins"
+    ],
+    "symptoms_hi": [
+      "पत्तियों की नसों के बीच लंबे आयताकार भूरे-जामुनी धब्बे"
+    ],
+    "differential_diagnosis": "Rectangular lesions bounded strictly by parallel veins.",
+    "cultural_management": ["Destroy previous maize crop residue."],
+    "biological_organic_management": ["Seed treatment before sowing."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_GRAM_FUSARIUM_WILT",
+    "crop_id": "gram",
+    "disease_name_en": "Fusarium Wilt",
+    "disease_name_hi": "उकठा / उखटा रोग (फ्युजेरियम विल्ट)",
+    "category": "Fungal",
+    "pathogen": "Fusarium oxysporum f. sp. ciceris",
+    "symptoms_en": [
+      "Sudden drooping of upper leaves, yellowing and drying of entire plant; dark brown to black internal xylem vascular discoloration when stem is split vertically"
+    ],
+    "symptoms_hi": [
+      "पौधे का अचानक मुरझाना, पत्तियां पीली होकर सूखना; तने को बीच से चीरने पर अंदर की नसें काली-भूरी दिखाई देना"
+    ],
+    "differential_diagnosis": "Internal vascular brown browning on split stem is conclusive for Fusarium wilt, distinguishing from dry root rot.",
+    "cultural_management": [
+      "Grow wilt-resistant cultivars (JG 11, Pusa 362, RVG 202)",
+      "Deep sowing (8-10 cm) and 3-year crop rotation with sorghum or wheat"
+    ],
+    "biological_organic_management": [
+      "Seed treatment with Trichoderma viride @ 5-10g/kg seed + soil application of 2.5 kg Trichoderma enriched in 100 kg FYM per acre"
+    ],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_GRAM_POD_BORER",
+    "crop_id": "gram",
+    "disease_name_en": "Gram Pod Borer Damage",
+    "disease_name_hi": "चना फली छेदक (हेलिकोवर्पा)",
+    "category": "Pest_Damage",
+    "pathogen": "Helicoverpa armigera (Insect Pest)",
+    "symptoms_en": [
+      "Caterpillar feeds on leaves during early stage and makes round entry holes into developing pods, eating inside seeds while keeping half body outside"
+    ],
+    "symptoms_hi": [
+      "सूंड़ी द्वारा फलियों में गोल छेद करके अंदर के दानों को खाना, आधा शरीर फली के बाहर लटका रहना"
+    ],
+    "differential_diagnosis": "Round circular holes in pods with hollowed grains inside.",
+    "cultural_management": [
+      "Intercropping with coriander or marigold as trap crop",
+      "Install T-shaped bird perches @ 20-25/acre to encourage predatory birds"
+    ],
+    "biological_organic_management": [
+      "Install Helilure pheromone traps @ 5/acre",
+      "Spray HaNPV (Helicoverpa Nuclear Polyhedrosis Virus) @ 250 LE/ha or Bacillus thuringiensis (Bt @ 1 kg/ha)"
+    ],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_WHEAT_ZINC_DEFICIENCY",
+    "crop_id": "wheat",
+    "disease_name_en": "Zinc Deficiency (Khaira-like Chlorosis)",
+    "disease_name_hi": "जिंक (जस्ता) की कमी के लक्षण",
+    "category": "Nutrient_Deficiency",
+    "pathogen": null,
+    "symptoms_en": [
+      "Interveinal chlorosis on 3rd and 4th upper leaves, bleached white-yellow bands in middle of leaf blade, stunting"
+    ],
+    "symptoms_hi": [
+      "तीसरी और चौथी ऊपरी पत्तियों की नसों के बीच पीलापन, पत्ती के मध्य में सफेद-पीली धारियां और पौधे का बौनापन"
+    ],
+    "differential_diagnosis": "Bleaching of middle leaf lamina without fungal pustules or spots.",
+    "cultural_management": ["Soil test based application of Zinc Sulphate (21% Zn @ 25 kg/ha) basal."],
+    "biological_organic_management": ["Foliar spray of 0.5% Zinc Sulphate + 0.25% unslaked lime solution."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIWBR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_RICE_ZINC_KHAIRA",
+    "crop_id": "rice",
+    "disease_name_en": "Khaira Disease (Zinc Deficiency)",
+    "disease_name_hi": "खैरा रोग (जिंक की कमी)",
+    "category": "Nutrient_Deficiency",
+    "pathogen": null,
+    "symptoms_en": [
+      "Rusty-brown / reddish-brown discoloration on younger leaves starting 2-3 weeks after transplanting, stunted root growth"
+    ],
+    "symptoms_hi": [
+      "रोपाई के 2-3 सप्ताह बाद पत्तियों पर कत्थई/लाल-भूरे रंग के धब्बे दिखना और जड़ों का विकास रुकना"
+    ],
+    "differential_diagnosis": "Rusty pigmentation across entire plant patches in alkaline or calcareous soils, not caused by a pathogen.",
+    "cultural_management": ["Basal application of Zinc Sulphate 21% @ 25 kg/ha before last puddling."],
+    "biological_organic_management": ["Foliar spray of 5 kg Zinc Sulphate + 2.5 kg hydrated lime in 500L water per hectare."],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_IIRR"],
+    "verification_status": "VERIFIED"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_1",
+    "crop_id": "cotton",
+    "disease_name_en": "Cotton Root Rot (Rhizoctonia)",
+    "disease_name_hi": "कपास जड़ गलन",
+    "category": "Fungal",
+    "pathogen": "Rhizoctonia bataticola",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_2",
+    "crop_id": "tomato",
+    "disease_name_en": "Tomato Bacterial Canker",
+    "disease_name_hi": "टमाटर जीवाणु कैंकर",
+    "category": "Bacterial",
+    "pathogen": "Clavibacter michiganensis",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_3",
+    "crop_id": "potato",
+    "disease_name_en": "Potato Common Scab",
+    "disease_name_hi": "आलू सामान्य खुरंड (स्कैब)",
+    "category": "Bacterial",
+    "pathogen": "Streptomyces scabies",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_CPRI"],
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_4",
+    "crop_id": "mustard",
+    "disease_name_en": "Mustard Downy Mildew",
+    "disease_name_hi": "सरसों तुलासिता (डाउनी मिल्ड्यू)",
+    "category": "Fungal",
+    "pathogen": "Hyaloperonospora brassicae",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_5",
+    "crop_id": "maize",
+    "disease_name_en": "Banded Leaf & Sheath Blight (BLSB)",
+    "disease_name_hi": "मक्का बैंडेड लीफ व शीथ ब्लाइट",
+    "category": "Fungal",
+    "pathogen": "Rhizoctonia solani f. sp. sasakii",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "PENDING_VERIFICATION"
+  },
+  {
+    "disease_id": "DIS_GENERIC_PENDING_6",
+    "crop_id": "gram",
+    "disease_name_en": "Gram Ascochyta Blight",
+    "disease_name_hi": "चना एस्कोकाइटा झुलसा",
+    "category": "Fungal",
+    "pathogen": "Ascochyta rabiei",
+    "symptoms_en": ["Verified data pending"],
+    "symptoms_hi": ["सत्यापित डेटा प्रतीक्षारत"],
+    "differential_diagnosis": null,
+    "cultural_management": [],
+    "biological_organic_management": [],
+    "chemical_management_reference_ids": [],
+    "source_ids": ["SRC_ICAR_MAIN"],
+    "verification_status": "PENDING_VERIFICATION"
+  }
+]

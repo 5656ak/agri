@@ -1,0 +1,119 @@
+{
+  "crop_id": "potato",
+  "crop_name_en": "Potato",
+  "crop_name_hi": "आलू",
+  "data_status": "VERIFIED",
+  "source_ids": ["SRC_ICAR_CPRI"],
+  "lifecycle_stages": [
+    {
+      "stage_number": 1,
+      "stage_name_en": "Seed Tuber Selection & Treatment",
+      "stage_name_hi": "1. बीज कंद चयन एवं उपचार",
+      "duration_days": "Day 0",
+      "irrigation_guidance": "Moist soil condition at planting.",
+      "nutrient_guidance": "Tuber treatment with Trichoderma viride or boric acid 3% solution.",
+      "pest_disease_scouting": "Check for potato tuber moth, scab, and dry rot in seed lots.",
+      "precautions": "Use certified seed tubers (e.g. Kufri Pukhraj, Kufri Jyoti, Kufri Bahar) with 2-3 sprouted eyes.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 2,
+      "stage_name_en": "Land Preparation & Ridging",
+      "stage_name_hi": "2. खेत की तैयारी एवं मेड़ बनाना",
+      "duration_days": "Day 1 - 7",
+      "irrigation_guidance": "Light irrigation before final ridging.",
+      "nutrient_guidance": "Basal application of well-rotted FYM (20-25 t/ha) + full P, full K, and 50% N.",
+      "pest_disease_scouting": "Scout for cutworms and soil grubs.",
+      "precautions": "Ensure deep, friable, loose sandy loam soil tilth.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 3,
+      "stage_name_en": "Planting / Tuber Sowing",
+      "stage_name_hi": "3. कंद बुवाई",
+      "duration_days": "Day 1",
+      "irrigation_guidance": "Plant in moist ridges; do not flood.",
+      "nutrient_guidance": "Place fertilizer 4-5 cm away from seed tubers to prevent salt injury.",
+      "pest_disease_scouting": "Check spacing uniformity (60x20 cm).",
+      "precautions": "Plant seed tubers 5-7 cm deep with sprouts facing upward.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 4,
+      "stage_name_en": "Sprout Emergence & Establishment",
+      "stage_name_hi": "4. कंद अंकुरण एवं जमाव",
+      "duration_days": "Day 10 - 20",
+      "irrigation_guidance": "Light furrow irrigation at 20-25% emergence.",
+      "nutrient_guidance": "No top-dress during initial emergence.",
+      "pest_disease_scouting": "Monitor for early cutworm damage.",
+      "precautions": "Water should not exceed 2/3rd height of ridges.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 5,
+      "stage_name_en": "Vegetative Growth & Earthing-Up",
+      "stage_name_hi": "5. वानस्पतिक वृद्धि एवं मिट्टी चढ़ाना (Earthing-up)",
+      "duration_days": "Day 25 - 40",
+      "irrigation_guidance": "Regular furrow irrigation at 7-10 day intervals.",
+      "nutrient_guidance": "Top-dress remaining 50% Nitrogen (Urea) at earthing-up (30-35 DAP).",
+      "pest_disease_scouting": "Scout for Early Blight (Alternaria solani) concentric spots and aphids.",
+      "precautions": "Perform earthing up properly to prevent developing tubers from turning green.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 6,
+      "stage_name_en": "Tuber Initiation (Stolon Hooking)",
+      "stage_name_hi": "6. कंद बनना (ट्यूबर इनिशिएशन)",
+      "duration_days": "Day 40 - 55",
+      "irrigation_guidance": "Critical moisture stage; maintain uniform furrow moisture.",
+      "nutrient_guidance": "Optional foliar spray of water-soluble 19:19:19 @ 0.5%.",
+      "pest_disease_scouting": "Intensive scouting for Late Blight (Phytophthora infestans) during overcast/foggy weather.",
+      "precautions": "Avoid water stress or sudden drying during stolon swelling.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 7,
+      "stage_name_en": "Tuber Bulking & Enlargement",
+      "stage_name_hi": "7. कंद का विकास व विस्तार (बल्किंग)",
+      "duration_days": "Day 55 - 80",
+      "irrigation_guidance": "Irrigate at 60-70% available soil moisture.",
+      "nutrient_guidance": "Foliar spray of Potassium Sulphate (0:0:50) @ 1% to improve tuber skin and solid content.",
+      "pest_disease_scouting": "Scout for Late Blight lesions on stems and leaves.",
+      "precautions": "Ensure tubers are fully covered with soil to avoid greening.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 8,
+      "stage_name_en": "Skin Hardening (Dehaulming)",
+      "stage_name_hi": "8. छिलका सख्त होना एवं बेल काटना (Dehaulming)",
+      "duration_days": "Day 80 - 95",
+      "irrigation_guidance": "Completely stop irrigation 10-12 days before cutting haulms.",
+      "nutrient_guidance": "No fertilizer application.",
+      "pest_disease_scouting": "Cut and remove aerial vines (haulms) 10-15 days before harvest.",
+      "precautions": "Dehaulming is essential to harden the tuber skin for transit and storage.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 9,
+      "stage_name_en": "Harvesting & Curing",
+      "stage_name_hi": "9. खुदाई एवं सुखाना (क्योरिंग)",
+      "duration_days": "Day 95 - 110",
+      "irrigation_guidance": "Dry field conditions.",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Inspect dug tubers for cuts, rot, or potato tuber moth larvae.",
+      "precautions": "Harvest in morning; cure tubers in shade for 7-10 days at 15-20°C.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    },
+    {
+      "stage_number": 10,
+      "stage_name_en": "Post-Harvest & Cold Storage",
+      "stage_name_hi": "10. कटाई उपरांत प्रबंधन एवं कोल्ड स्टोरेज",
+      "duration_days": "Post Harvest",
+      "irrigation_guidance": "N/A",
+      "nutrient_guidance": "N/A",
+      "pest_disease_scouting": "Monitor cold store temperature (3-4°C for seed, 8-10°C with CIPC for table/processing potato).",
+      "precautions": "Sort out damaged and rotted tubers before bagging.",
+      "source_ids": ["SRC_ICAR_CPRI"]
+    }
+  ]
+}
