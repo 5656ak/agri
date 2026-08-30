@@ -377,13 +377,14 @@ export const FertilizerPage: React.FC<FertilizerPageProps> = ({ onSelectTab, lan
               </p>
 
               <button
-                onClick={() => onSelectTab('kvk-connect')}
+                onClick={() => onSelectTab('expert')}
                 className="btn btn-primary btn-block"
                 style={{ background: '#DC2626', border: 'none' }}
               >
                 <PhoneCall size={18} />
                 <span>{language === 'hi' ? 'नजदीकी KVK वैज्ञानिक से संपर्क करें' : 'Connect to Nearest KVK'}</span>
               </button>
+
             </div>
           ) : (
             /* Verified STCR Mathematical Output */

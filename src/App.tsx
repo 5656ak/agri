@@ -1,102 +1,246 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Language, NavigationTab } from './types';
+import { dataStore } from './services/dataStore';
+
+// Common Components
 import { Header } from './components/common/Header';
 import { BottomNav } from './components/common/BottomNav';
+import { LocationModal } from './components/common/LocationModal';
+import { OnboardingModal } from './components/common/OnboardingModal';
+import { VoiceAssistantModal } from './components/common/VoiceAssistantModal';
+import { NotificationDrawer } from './components/common/NotificationDrawer';
+import { AddCropModal } from './components/common/AddCropModal';
+
+// Farmer Pages
 import { HomePage } from './pages/HomePage';
-import { DashboardPage } from './pages/DashboardPage';
-import { CropDoctorPage } from './pages/CropDoctorPage';
+import { CropsPage } from './pages/CropsPage';
+import { CropDetailPage } from './pages/CropDetailPage';
+import { ScanPage } from './pages/ScanPage';
+import { WeatherPage } from './pages/WeatherPage';
+import { IrrigationPage } from './pages/IrrigationPage';
 import { FertilizerPage } from './pages/FertilizerPage';
-import { LifecyclePage } from './pages/LifecyclePage';
-import { KisanMitraPage } from './pages/KisanMitraPage';
-import { KvkConnectPage } from './pages/KvkConnectPage';
-import { ShieldCheck, PhoneCall, Heart } from 'lucide-react';
+import { PestDirectoryPage } from './pages/PestDirectoryPage';
+import { CalendarPage } from './pages/CalendarPage';
+import { MarketPage } from './pages/MarketPage';
+import { SchemesPage } from './pages/SchemesPage';
+import { FarmPage } from './pages/FarmPage';
+import { ExpensesPage } from './pages/ExpensesPage';
+import { ExpertConnectPage } from './pages/ExpertConnectPage';
+
+// Admin Page
+import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { Mic } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<NavigationTab>('home');
+  const [selectedCropDetailId, setSelectedCropDetailId] = useState<string>('fc-1');
   const [language, setLanguage] = useState<Language>('hi');
+
+  // Modal States
+  const [isLocationOpen, setIsLocationOpen] = useState(false);
+  const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
+  const [isVoiceOpen, setIsVoiceOpen] = useState(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isAddCropOpen, setIsAddCropOpen] = useState(false);
+
+  // Subscribe to DataStore changes
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const unsubscribe = dataStore.subscribe(() => {
+      setTick((prev) => prev + 1);
+    });
+
+    const farmer = dataStore.getFarmerProfile();
+    if (!farmer.onboardingCompleted) {
+      setIsOnboardingOpen(true);
+    }
+
+    return () => unsubscribe();
+  }, []);
 
   const handleToggleLanguage = () => {
     setLanguage((prev) => (prev === 'hi' ? 'en' : 'hi'));
   };
 
+  const handleOpenCropDetail = (cropId: string) => {
+    setSelectedCropDetailId(cropId);
+    setCurrentTab('crop-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSelectTab = (tab: NavigationTab) => {
+    setCurrentTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="app-container">
-      {/* Universal Top Header */}
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* 1. App Header */}
       <Header
         currentTab={currentTab}
-        onSelectTab={setCurrentTab}
+        onSelectTab={handleSelectTab}
         language={language}
         onToggleLanguage={handleToggleLanguage}
+        onOpenLocationModal={() => setIsLocationOpen(true)}
+        onOpenNotifications={() => setIsNotificationOpen(true)}
       />
 
-      {/* Main Active Page View */}
-      <main className="main-content" id="main-content" role="main">
+      {/* 2. Main Body Content Area */}
+      <main className="app-container" style={{ flex: 1 }}>
         {currentTab === 'home' && (
-          <HomePage onSelectTab={setCurrentTab} language={language} />
+          <HomePage
+            onSelectTab={handleSelectTab}
+            onOpenCropDetail={handleOpenCropDetail}
+            onOpenAddCrop={() => setIsAddCropOpen(true)}
+            onOpenVoiceAssistant={() => setIsVoiceOpen(true)}
+            language={language}
+          />
         )}
 
-        {currentTab === 'dashboard' && (
-          <DashboardPage onSelectTab={setCurrentTab} language={language} />
+        {currentTab === 'crops' && (
+          <CropsPage
+            onSelectTab={handleSelectTab}
+            onOpenCropDetail={handleOpenCropDetail}
+            onOpenAddCrop={() => setIsAddCropOpen(true)}
+            language={language}
+          />
         )}
 
-        {currentTab === 'crop-doctor' && (
-          <CropDoctorPage onSelectTab={setCurrentTab} language={language} />
+        {currentTab === 'crop-detail' && (
+          <CropDetailPage
+            cropId={selectedCropDetailId}
+            onBack={() => handleSelectTab('crops')}
+            onSelectTab={handleSelectTab}
+            language={language}
+          />
+        )}
+
+        {currentTab === 'scan' && (
+          <ScanPage
+            onSelectTab={handleSelectTab}
+            language={language}
+          />
+        )}
+
+        {currentTab === 'weather' && (
+          <WeatherPage
+            language={language}
+          />
+        )}
+
+        {currentTab === 'irrigation' && (
+          <IrrigationPage
+            language={language}
+          />
         )}
 
         {currentTab === 'fertilizer' && (
-          <FertilizerPage onSelectTab={setCurrentTab} language={language} />
+          <FertilizerPage
+            onSelectTab={handleSelectTab}
+            language={language}
+          />
         )}
 
-        {currentTab === 'lifecycle' && (
-          <LifecyclePage onSelectTab={setCurrentTab} language={language} />
+        {currentTab === 'pests' && (
+          <PestDirectoryPage
+            onSelectTab={handleSelectTab}
+            language={language}
+          />
         )}
 
-        {currentTab === 'kisan-mitra' && (
-          <KisanMitraPage onSelectTab={setCurrentTab} language={language} />
+        {currentTab === 'calendar' && (
+          <CalendarPage
+            language={language}
+          />
         )}
 
-        {currentTab === 'kvk-connect' && (
-          <KvkConnectPage language={language} />
+        {currentTab === 'market' && (
+          <MarketPage
+            language={language}
+          />
+        )}
+
+        {currentTab === 'schemes' && (
+          <SchemesPage
+            language={language}
+          />
+        )}
+
+        {currentTab === 'farm' && (
+          <FarmPage
+            onSelectTab={handleSelectTab}
+            onOpenCropDetail={handleOpenCropDetail}
+            onOpenAddCrop={() => setIsAddCropOpen(true)}
+            language={language}
+          />
+        )}
+
+        {currentTab === 'expenses' && (
+          <ExpensesPage
+            language={language}
+          />
+        )}
+
+        {currentTab === 'expert' && (
+          <ExpertConnectPage
+            language={language}
+          />
+        )}
+
+        {currentTab === 'admin' && (
+          <AdminDashboard
+            language={language}
+          />
         )}
       </main>
 
-      {/* Trust Footer */}
-      <footer 
-        style={{
-          borderTop: '1px solid var(--color-border)',
-          background: '#FFFFFF',
-          padding: '1.5rem 1rem',
-          marginTop: 'auto',
-          fontSize: '0.82rem',
-          color: 'var(--color-text-subtle)',
-          textAlign: 'center'
-        }}
+      {/* 3. Floating Voice Assistant Button */}
+      <button
+        onClick={() => setIsVoiceOpen(true)}
+        className="floating-voice-btn"
+        aria-label="Kisan Voice Assistant"
+        title="बोलकर पूछें (Voice Assistant)"
       >
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: 'var(--color-primary-dark)' }}>
-            <span>KrishiVigyan AI</span>
-            <span>•</span>
-            <span>Smart India Hackathon (SIH) Prototype</span>
-          </div>
+        <Mic size={26} />
+      </button>
 
-          <p style={{ maxWidth: '700px', lineHeight: 1.5, color: '#64748B', fontSize: '0.78rem' }}>
-            {language === 'hi'
-              ? 'अस्वीकरण: यह प्लेटफॉर्म भारतीय कृषि अनुसंधान परिषद (ICAR), कृषि विज्ञान केंद्रों (KVK) व CIB&RC के सार्वजनिक पैकेज ऑफ प्रैक्टिसेज के सिद्धांतों पर आधारित एक प्रोटोटाइप है। यह एक AI-सहायित निर्णय प्रणाली है, पक्का निदान नहीं।'
-              : 'Disclaimer: This platform is an agricultural decision-support prototype grounded in scientific principles from ICAR, KVKs, and CIB&RC published packages of practices. AI-assisted assessment is not a guaranteed diagnosis.'}
-          </p>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', color: '#94A3B8' }}>
-            <span>Built for Indian Farmers with</span>
-            <Heart size={13} color="#DC2626" fill="#DC2626" />
-            <span>• Phase 1A Foundation</span>
-          </div>
-        </div>
-      </footer>
-
-      {/* Mobile Bottom Navigation Bar */}
+      {/* 4. Mobile Bottom Navigation */}
       <BottomNav
         currentTab={currentTab}
-        onSelectTab={setCurrentTab}
+        onSelectTab={handleSelectTab}
+        language={language}
+        onOpenMenu={() => handleSelectTab('expenses')}
+      />
+
+      {/* 5. Modals & Overlays */}
+      <LocationModal
+        isOpen={isLocationOpen}
+        onClose={() => setIsLocationOpen(false)}
+        language={language}
+      />
+
+      <OnboardingModal
+        isOpen={isOnboardingOpen}
+        onComplete={() => setIsOnboardingOpen(false)}
+        language={language}
+      />
+
+      <VoiceAssistantModal
+        isOpen={isVoiceOpen}
+        onClose={() => setIsVoiceOpen(false)}
+        language={language}
+      />
+
+      <NotificationDrawer
+        isOpen={isNotificationOpen}
+        onClose={() => setIsNotificationOpen(false)}
+        onSelectTab={handleSelectTab}
+        language={language}
+      />
+
+      <AddCropModal
+        isOpen={isAddCropOpen}
+        onClose={() => setIsAddCropOpen(false)}
         language={language}
       />
     </div>
@@ -104,3 +248,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

@@ -1,63 +1,65 @@
 import React from 'react';
-import { Home, LayoutDashboard, Stethoscope, FlaskConical, Bot } from 'lucide-react';
+import { Home, Sprout, Camera, Grid, Menu } from 'lucide-react';
 import { Language, NavigationTab } from '../../types';
+import { getTranslation } from '../../i18n/translations';
 
 interface BottomNavProps {
   currentTab: NavigationTab;
   onSelectTab: (tab: NavigationTab) => void;
   language: Language;
+  onOpenMenu: () => void;
 }
 
 export const BottomNav: React.FC<BottomNavProps> = ({
   currentTab,
   onSelectTab,
-  language
+  language,
+  onOpenMenu
 }) => {
+  const t = getTranslation(language);
+
   return (
-    <nav className="mobile-bottom-nav" aria-label="Mobile Navigation Bar">
+    <nav className="bottom-nav" role="navigation" aria-label="Mobile Navigation">
+      {/* 1. Home */}
       <button
-        className={`mobile-nav-item ${currentTab === 'home' ? 'active' : ''}`}
         onClick={() => onSelectTab('home')}
-        aria-label="Home"
+        className={`nav-item ${currentTab === 'home' ? 'active' : ''}`}
       >
-        <Home className="mobile-nav-icon" />
-        <span>{language === 'hi' ? 'होम' : 'Home'}</span>
+        <Home size={20} />
+        <span>{t.navHome}</span>
       </button>
 
+      {/* 2. Crops */}
       <button
-        className={`mobile-nav-item ${currentTab === 'dashboard' ? 'active' : ''}`}
-        onClick={() => onSelectTab('dashboard')}
-        aria-label="My Crops Dashboard"
+        onClick={() => onSelectTab('crops')}
+        className={`nav-item ${currentTab === 'crops' || currentTab === 'crop-detail' ? 'active' : ''}`}
       >
-        <LayoutDashboard className="mobile-nav-icon" />
-        <span>{language === 'hi' ? 'डैशबोर्ड' : 'My Crops'}</span>
+        <Sprout size={20} />
+        <span>{t.navCrops}</span>
       </button>
 
+      {/* 3. Scan (Prominent Center Button) */}
       <button
-        className={`mobile-nav-item ${currentTab === 'crop-doctor' ? 'active' : ''}`}
-        onClick={() => onSelectTab('crop-doctor')}
-        aria-label="Crop Doctor"
+        onClick={() => onSelectTab('scan')}
+        className="nav-item nav-item-scan"
+        aria-label="Scan Crop Health"
       >
-        <Stethoscope className="mobile-nav-icon" />
-        <span>{language === 'hi' ? 'रोग जांच' : 'Doctor'}</span>
+        <Camera size={26} color="#FFFFFF" />
       </button>
 
+      {/* 4. My Farm */}
       <button
-        className={`mobile-nav-item ${currentTab === 'fertilizer' ? 'active' : ''}`}
-        onClick={() => onSelectTab('fertilizer')}
-        aria-label="Fertilizer Advisor"
+        onClick={() => onSelectTab('farm')}
+        className={`nav-item ${currentTab === 'farm' ? 'active' : ''}`}
       >
-        <FlaskConical className="mobile-nav-icon" />
-        <span>{language === 'hi' ? 'खाद' : 'Fertilizer'}</span>
+        <Grid size={20} />
+        <span>{t.navFarm}</span>
       </button>
 
-      <button
-        className={`mobile-nav-item ${currentTab === 'kisan-mitra' ? 'active' : ''}`}
-        onClick={() => onSelectTab('kisan-mitra')}
-        aria-label="AI Assistant"
-      >
-        <Bot className="mobile-nav-icon" />
-        <span>{language === 'hi' ? 'किसान मित्र' : 'AI Mitra'}</span>
+      {/* 5. More Menu */}
+      <button onClick={onOpenMenu} className="nav-item">
+        <Menu size={20} />
+        <span>{t.navMore}</span>
       </button>
     </nav>
   );
