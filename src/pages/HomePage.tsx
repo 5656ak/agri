@@ -17,7 +17,8 @@ import {
   ChevronRight,
   ShieldCheck,
   CheckCircle2,
-  PhoneCall
+  PhoneCall,
+  Volume2
 } from 'lucide-react';
 import { Language, NavigationTab } from '../types';
 import { dataStore } from '../services/dataStore';
@@ -43,6 +44,17 @@ export const HomePage: React.FC<HomePageProps> = ({
   const farmerCrops = dataStore.getFarmerCrops();
   const weather = dataStore.getWeather();
   const mandiPrices = dataStore.getMandiPrices();
+
+  const handleSpeak = (text: string, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = language === 'hi' ? 'hi-IN' : 'en-IN';
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
   const eligibleSchemes = dataStore.getEligibleSchemesForFarmer();
   const recommendations = recommendationEngine.getTodayRecommendations(language);
   const t = getTranslation(language);
@@ -124,13 +136,26 @@ export const HomePage: React.FC<HomePageProps> = ({
             border: '1px solid rgba(255, 255, 255, 0.2)',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'space-between',
             gap: '0.6rem'
           }}
         >
-          <span style={{ fontSize: '1.2rem' }}>🌧️</span>
-          <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#F0FDF4' }}>
-            {language === 'hi' ? weather.farmingDirectiveHi : weather.farmingDirectiveEn}
-          </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ fontSize: '1.2rem' }}>🌧️</span>
+            <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#F0FDF4' }}>
+              {language === 'hi' ? weather.farmingDirectiveHi : weather.farmingDirectiveEn}
+            </span>
+          </div>
+
+          <button
+            type="button"
+            onClick={(e) => handleSpeak(language === 'hi' ? weather.farmingDirectiveHi : weather.farmingDirectiveEn, e)}
+            className="btn btn-sm"
+            style={{ minHeight: '32px', padding: '0.2rem 0.5rem', background: 'rgba(255,255,255,0.2)', color: '#FFFFFF', border: 'none', borderRadius: '6px' }}
+            title="सुनें (Audio Speech)"
+          >
+            <Volume2 size={16} />
+          </button>
         </div>
       </div>
 
@@ -158,6 +183,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
             const borderColor = isCritical ? '#FCA5A5' : isWarning ? '#FDE68A' : isSuccess ? '#BBF7D0' : '#BFDBFE';
             const bgColor = isCritical ? '#FFF5F5' : isWarning ? '#FFFBEB' : isSuccess ? '#F0FDF4' : '#EFF6FF';
+            const speechText = `${language === 'hi' ? rec.titleHi : rec.titleEn}. ${language === 'hi' ? rec.actionTextHi : rec.actionTextEn}. कारण: ${language === 'hi' ? rec.reasonHi : rec.reasonEn}`;
 
             return (
               <div
@@ -195,15 +221,29 @@ export const HomePage: React.FC<HomePageProps> = ({
                   </p>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '0.25rem', color: '#1E5631', fontSize: '0.8rem', fontWeight: 700, paddingTop: '0.35rem', borderTop: '1px dashed rgba(0,0,0,0.08)' }}>
-                  <span>विस्तार से देखें</span>
-                  <ChevronRight size={14} />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.35rem', borderTop: '1px dashed rgba(0,0,0,0.08)' }}>
+                  <button
+                    type="button"
+                    onClick={(e) => handleSpeak(speechText, e)}
+                    className="btn btn-sm"
+                    style={{ minHeight: '30px', padding: '0.2rem 0.6rem', fontSize: '0.75rem', background: '#FFFFFF', color: '#1E5631', border: '1px solid #D1D5DB', borderRadius: '6px' }}
+                    title="बोलकर सुनाएं"
+                  >
+                    <Volume2 size={14} />
+                    <span>सुनें (Audio)</span>
+                  </button>
+
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#1E5631', fontSize: '0.8rem', fontWeight: 700 }}>
+                    <span>विस्तार से देखें</span>
+                    <ChevronRight size={14} />
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+
 
       {/* 4. 🌾 MY CROPS SECTION */}
       <div>
