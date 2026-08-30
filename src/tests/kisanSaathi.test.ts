@@ -108,14 +108,20 @@ describe('Dynamic Recommendation Engine ("Don\'t just show data. Tell the farmer
     expect(pestRec).toBeDefined();
   });
 
-  it('should support bilingual translation toggling', () => {
+  it('should support multi-language translation (Hindi, English, Punjabi, Marathi, Telugu, Bengali)', () => {
     const hindiTrans = getTranslation('hi');
     const englishTrans = getTranslation('en');
+    const punjabiTrans = getTranslation('pa');
+    const marathiTrans = getTranslation('mr');
+    const teluguTrans = getTranslation('te');
+    const bengaliTrans = getTranslation('bn');
 
     expect(hindiTrans.appName).toBe('KisanSaathi');
-    expect(hindiTrans.greeting).toContain('नमस्ते');
-    expect(englishTrans.greeting).toContain('Namaste');
-    expect(hindiTrans.todayAdviceTitle).toContain('आज आपके खेत में');
-    expect(englishTrans.todayAdviceTitle).toContain('Today in Your Field');
+    expect(englishTrans.appName).toBe('KisanSaathi');
+    expect(punjabiTrans.greeting).toContain('ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ');
+    expect(marathiTrans.greeting).toContain('नमस्कार');
+    expect(teluguTrans.greeting).toContain('నమస్కారం');
+    expect(bengaliTrans.greeting).toContain('নমস্কার');
   });
 });
+

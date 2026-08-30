@@ -1,4 +1,5 @@
-export type Language = 'hi' | 'en';
+export type Language = 'hi' | 'en' | 'pa' | 'mr' | 'te' | 'bn';
+
 
 export type NavigationTab =
   | 'home'

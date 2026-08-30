@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapPin, Globe, Bell, User, ShieldCheck, Sprout, Sun } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Globe, Bell, User, ShieldCheck, Sprout } from 'lucide-react';
 import { Language, NavigationTab } from '../../types';
 import { dataStore } from '../../services/dataStore';
 import { getTranslation } from '../../i18n/translations';
@@ -8,19 +8,29 @@ interface HeaderProps {
   currentTab: NavigationTab;
   onSelectTab: (tab: NavigationTab) => void;
   language: Language;
-  onToggleLanguage: () => void;
+  onSelectLanguage: (lang: Language) => void;
   onOpenLocationModal: () => void;
   onOpenNotifications: () => void;
 }
+
+const SUPPORTED_LANGUAGES: { id: Language; label: string }[] = [
+  { id: 'hi', label: '🇮🇳 हिन्दी' },
+  { id: 'en', label: '🇬🇧 English' },
+  { id: 'pa', label: '🌾 ਪੰਜਾਬੀ' },
+  { id: 'mr', label: '🌱 मराठी' },
+  { id: 'te', label: '🌿 తెలుగు' },
+  { id: 'bn', label: '🌾 বাংলা' }
+];
 
 export const Header: React.FC<HeaderProps> = ({
   currentTab,
   onSelectTab,
   language,
-  onToggleLanguage,
+  onSelectLanguage,
   onOpenLocationModal,
   onOpenNotifications
 }) => {
+  const [showLangMenu, setShowLangMenu] = useState(false);
   const farmer = dataStore.getFarmerProfile();
   const unreadCount = dataStore.getUnreadNotificationCount();
   const t = getTranslation(language);
@@ -55,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
             <div style={{ fontSize: '0.7rem', color: '#4B5563', lineHeight: 1 }}>
-              {language === 'hi' ? 'आपके खेत का स्मार्ट साथी' : 'Smart Farming Assistant'}
+              {t.tagline}
             </div>
           </div>
         </div>
@@ -75,16 +85,61 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
           </button>
 
-          {/* Language Switcher */}
-          <button
-            onClick={onToggleLanguage}
-            className="btn btn-secondary btn-sm"
-            style={{ padding: '0.4rem 0.75rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700 }}
-            title="Switch Language"
-          >
-            <Globe size={15} color="#2563EB" />
-            <span>{language === 'hi' ? 'English' : 'हिन्दी'}</span>
-          </button>
+          {/* 6-Language Dropdown Switcher */}
+          <div style={{ position: 'relative' }}>
+            <button
+              onClick={() => setShowLangMenu(!showLangMenu)}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.4rem 0.75rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700 }}
+              title="Select Language"
+            >
+              <Globe size={15} color="#2563EB" />
+              <span>{SUPPORTED_LANGUAGES.find((l) => l.id === language)?.label.split(' ')[1] || 'Language'}</span>
+            </button>
+
+            {showLangMenu && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '110%',
+                  right: 0,
+                  background: '#FFFFFF',
+                  border: '1.5px solid #E5E7EB',
+                  borderRadius: '12px',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+                  zIndex: 100,
+                  minWidth: '150px',
+                  padding: '0.35rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.2rem'
+                }}
+              >
+                {SUPPORTED_LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.id}
+                    onClick={() => {
+                      onSelectLanguage(lang.id);
+                      setShowLangMenu(false);
+                    }}
+                    style={{
+                      padding: '0.45rem 0.75rem',
+                      borderRadius: '8px',
+                      border: 'none',
+                      background: language === lang.id ? '#E8F5E9' : 'transparent',
+                      color: language === lang.id ? '#1E5631' : '#374151',
+                      fontWeight: language === lang.id ? 700 : 500,
+                      fontSize: '0.85rem',
+                      textAlign: 'left',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Notification Bell with Badge */}
           <button

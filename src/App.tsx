@@ -80,10 +80,11 @@ export const App: React.FC = () => {
         currentTab={currentTab}
         onSelectTab={handleSelectTab}
         language={language}
-        onToggleLanguage={handleToggleLanguage}
+        onSelectLanguage={(lang) => setLanguage(lang)}
         onOpenLocationModal={() => setIsLocationOpen(true)}
         onOpenNotifications={() => setIsNotificationOpen(true)}
       />
+
 
       {/* 2. Main Body Content Area */}
       <main className="app-container" style={{ flex: 1 }}>
