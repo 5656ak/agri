@@ -9,13 +9,15 @@ import {
   Users, 
   Package, 
   MapPin, 
-  LineChart, 
+  LineChart,
   FileText,
+  Table,
+  Database,
   X
 } from 'lucide-react';
 
 export const QuickCommandModal: React.FC = () => {
-  const { isCommandPaletteOpen, setIsCommandPaletteOpen, setActiveTab } = useAnalytics();
+  const { isCommandPaletteOpen, setIsCommandPaletteOpen, setActiveTab, kpis, orders } = useAnalytics();
   const [query, setQuery] = useState('');
   const [aiResult, setAiResult] = useState<AiQueryResult | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -47,13 +49,15 @@ export const QuickCommandModal: React.FC = () => {
 
   const quickNav = [
     { label: 'Overview Dashboard', tab: 'overview', icon: TrendingUp },
-    { label: 'Sales Transactions', tab: 'sales', icon: TrendingUp },
+    { label: 'Sales Transactions Ledger', tab: 'sales', icon: TrendingUp },
     { label: 'Customer Cohorts & LTV', tab: 'customers', icon: Users },
     { label: 'Product Margins & SKU Drilldown', tab: 'products', icon: Package },
-    { label: 'India Regional Performance', tab: 'regions', icon: MapPin },
-    { label: 'Sales Forecasting & Projections', tab: 'forecast', icon: LineChart },
+    { label: 'Regional Territory Performance', tab: 'regions', icon: MapPin },
+    { label: 'Predictive Sales Forecasting', tab: 'forecast', icon: LineChart },
     { label: 'AI Business Intelligence', tab: 'ai-insights', icon: Sparkles },
-    { label: 'Business Reports & PDF Export', tab: 'reports', icon: FileText },
+    { label: 'Executive Reports & Exports', tab: 'reports', icon: FileText },
+    { label: 'Enter Orders Manually', tab: 'manual-entry', icon: Table },
+    { label: 'Manage Data Sources', tab: 'data-sources', icon: Database },
   ];
 
   const suggestions = [
@@ -66,7 +70,7 @@ export const QuickCommandModal: React.FC = () => {
 
   const handleRunAi = (prompt: string) => {
     setQuery(prompt);
-    const res = executeAiQuery(prompt);
+    const res = executeAiQuery(prompt, kpis, orders);
     setAiResult(res);
   };
 

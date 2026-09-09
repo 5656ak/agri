@@ -22,6 +22,7 @@ import { ForecastPage } from './pages/ForecastPage';
 import { AiInsightsPage } from './pages/AiInsightsPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { DataSourcesPage } from './pages/DataSourcesPage';
+import { DataImportPage } from './pages/DataImportPage';
 import { ManualDataPage } from './pages/ManualDataPage';
 import { Loader2 } from 'lucide-react';
 
@@ -55,8 +56,9 @@ const AppShell: React.FC = () => {
       case 'manual-entry':
         return <ManualDataPage />;
       case 'data-sources':
-      case 'data-import':
         return <DataSourcesPage />;
+      case 'data-import':
+        return <DataImportPage />;
       default:
         return <OverviewPage />;
     }
