@@ -1,252 +1,202 @@
-import React, { useState, useEffect } from 'react';
-import { Language, NavigationTab } from './types';
-import { dataStore } from './services/dataStore';
+import React, { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import { AnalyticsProvider, useAnalytics } from './context/AnalyticsContext';
+import { Sidebar } from './components/layout/Sidebar';
+import { Topbar } from './components/layout/Topbar';
+import { QuickCommandModal } from './components/layout/QuickCommandModal';
+import { SettingsModal } from './components/modals/SettingsModal';
+import { HelpDrawer } from './components/modals/HelpDrawer';
+import { ToastContainer } from './components/common/Toast';
 
-// Common Components
-import { Header } from './components/common/Header';
-import { BottomNav } from './components/common/BottomNav';
-import { LocationModal } from './components/common/LocationModal';
-import { OnboardingModal } from './components/common/OnboardingModal';
-import { VoiceAssistantModal } from './components/common/VoiceAssistantModal';
-import { NotificationDrawer } from './components/common/NotificationDrawer';
-import { AddCropModal } from './components/common/AddCropModal';
+// Pages
+import { LandingPage } from './pages/LandingPage';
+import { AuthPage } from './pages/AuthPage';
+import { OnboardingPage } from './pages/OnboardingPage';
+import { OverviewPage } from './pages/OverviewPage';
+import { SalesPage } from './pages/SalesPage';
+import { ProductsPage } from './pages/ProductsPage';
+import { CustomersPage } from './pages/CustomersPage';
+import { RegionsPage } from './pages/RegionsPage';
+import { ForecastPage } from './pages/ForecastPage';
+import { AiInsightsPage } from './pages/AiInsightsPage';
+import { ReportsPage } from './pages/ReportsPage';
+import { DataSourcesPage } from './pages/DataSourcesPage';
+import { ManualDataPage } from './pages/ManualDataPage';
+import { Loader2 } from 'lucide-react';
 
-// Farmer Pages
-import { HomePage } from './pages/HomePage';
-import { CropsPage } from './pages/CropsPage';
-import { CropDetailPage } from './pages/CropDetailPage';
-import { ScanPage } from './pages/ScanPage';
-import { WeatherPage } from './pages/WeatherPage';
-import { IrrigationPage } from './pages/IrrigationPage';
-import { FertilizerPage } from './pages/FertilizerPage';
-import { PestDirectoryPage } from './pages/PestDirectoryPage';
-import { CalendarPage } from './pages/CalendarPage';
-import { MarketPage } from './pages/MarketPage';
-import { SchemesPage } from './pages/SchemesPage';
-import { FarmPage } from './pages/FarmPage';
-import { ExpensesPage } from './pages/ExpensesPage';
-import { ExpertConnectPage } from './pages/ExpertConnectPage';
+const AppShell: React.FC = () => {
+  const { activeTab, showLanding, setShowLanding } = useAnalytics();
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-// Admin Page
-import { AdminDashboard } from './pages/admin/AdminDashboard';
-import { Mic } from 'lucide-react';
+  if (showLanding) {
+    return <LandingPage onOpenAuth={() => setShowLanding(false)} />;
+  }
 
-export const App: React.FC = () => {
-  const [currentTab, setCurrentTab] = useState<NavigationTab>('home');
-  const [selectedCropDetailId, setSelectedCropDetailId] = useState<string>('fc-1');
-  const [language, setLanguage] = useState<Language>('hi');
-
-  // Modal States
-  const [isLocationOpen, setIsLocationOpen] = useState(false);
-  const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
-  const [isVoiceOpen, setIsVoiceOpen] = useState(false);
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-  const [isAddCropOpen, setIsAddCropOpen] = useState(false);
-
-  // Subscribe to DataStore changes
-  const [, setTick] = useState(0);
-  useEffect(() => {
-    const unsubscribe = dataStore.subscribe(() => {
-      setTick((prev) => prev + 1);
-    });
-
-    const farmer = dataStore.getFarmerProfile();
-    if (!farmer.onboardingCompleted) {
-      setIsOnboardingOpen(true);
+  const renderActivePage = () => {
+    switch (activeTab) {
+      case 'overview':
+        return <OverviewPage />;
+      case 'sales':
+        return <SalesPage />;
+      case 'customers':
+        return <CustomersPage />;
+      case 'products':
+        return <ProductsPage />;
+      case 'regions':
+        return <RegionsPage />;
+      case 'forecast':
+        return <ForecastPage />;
+      case 'ai-insights':
+        return <AiInsightsPage />;
+      case 'reports':
+        return <ReportsPage />;
+      case 'manual-entry':
+        return <ManualDataPage />;
+      case 'data-sources':
+      case 'data-import':
+        return <DataSourcesPage />;
+      default:
+        return <OverviewPage />;
     }
-
-    return () => unsubscribe();
-  }, []);
-
-  const handleToggleLanguage = () => {
-    setLanguage((prev) => (prev === 'hi' ? 'en' : 'hi'));
-  };
-
-  const handleOpenCropDetail = (cropId: string) => {
-    setSelectedCropDetailId(cropId);
-    setCurrentTab('crop-detail');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSelectTab = (tab: NavigationTab) => {
-    setCurrentTab(tab);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* 1. App Header */}
-      <Header
-        currentTab={currentTab}
-        onSelectTab={handleSelectTab}
-        language={language}
-        onSelectLanguage={(lang) => setLanguage(lang)}
-        onOpenLocationModal={() => setIsLocationOpen(true)}
-        onOpenNotifications={() => setIsNotificationOpen(true)}
+    <div className="app-container">
+      {/* Desktop Sidebar */}
+      <Sidebar
+        isCollapsed={isSidebarCollapsed}
+        onToggleCollapse={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
       />
 
+      {/* Mobile Drawer Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="modal-overlay"
+          style={{ justifyContent: 'flex-start', padding: 0 }}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <div
+            style={{
+              width: 280,
+              height: '100%',
+              background: 'var(--bg-surface)',
+              boxShadow: 'var(--shadow-xl)',
+              animation: 'fadeIn 0.15s ease',
+              overflowY: 'auto'
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <Sidebar
+              isCollapsed={false}
+              onToggleCollapse={() => setIsMobileMenuOpen(false)}
+            />
+          </div>
+        </div>
+      )}
 
-      {/* 2. Main Body Content Area */}
-      <main className="app-container" style={{ flex: 1 }}>
-        {currentTab === 'home' && (
-          <HomePage
-            onSelectTab={handleSelectTab}
-            onOpenCropDetail={handleOpenCropDetail}
-            onOpenAddCrop={() => setIsAddCropOpen(true)}
-            onOpenVoiceAssistant={() => setIsVoiceOpen(true)}
-            language={language}
-          />
-        )}
+      {/* Main Content Area */}
+      <div className="main-content">
+        <Topbar
+          onToggleMobileMenu={() => {
+            if (window.innerWidth < 768) {
+              setIsMobileMenuOpen(true);
+            } else {
+              setIsSidebarCollapsed(!isSidebarCollapsed);
+            }
+          }}
+        />
 
-        {currentTab === 'crops' && (
-          <CropsPage
-            onSelectTab={handleSelectTab}
-            onOpenCropDetail={handleOpenCropDetail}
-            onOpenAddCrop={() => setIsAddCropOpen(true)}
-            language={language}
-          />
-        )}
+        <main className="page-body">
+          {renderActivePage()}
+        </main>
+      </div>
 
-        {currentTab === 'crop-detail' && (
-          <CropDetailPage
-            cropId={selectedCropDetailId}
-            onBack={() => handleSelectTab('crops')}
-            onSelectTab={handleSelectTab}
-            language={language}
-          />
-        )}
-
-        {currentTab === 'scan' && (
-          <ScanPage
-            onSelectTab={handleSelectTab}
-            language={language}
-          />
-        )}
-
-        {currentTab === 'weather' && (
-          <WeatherPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'irrigation' && (
-          <IrrigationPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'fertilizer' && (
-          <FertilizerPage
-            onSelectTab={handleSelectTab}
-            language={language}
-          />
-        )}
-
-        {currentTab === 'pests' && (
-          <PestDirectoryPage
-            onSelectTab={handleSelectTab}
-            language={language}
-          />
-        )}
-
-        {currentTab === 'calendar' && (
-          <CalendarPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'market' && (
-          <MarketPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'schemes' && (
-          <SchemesPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'farm' && (
-          <FarmPage
-            onSelectTab={handleSelectTab}
-            onOpenCropDetail={handleOpenCropDetail}
-            onOpenAddCrop={() => setIsAddCropOpen(true)}
-            language={language}
-          />
-        )}
-
-        {currentTab === 'expenses' && (
-          <ExpensesPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'expert' && (
-          <ExpertConnectPage
-            language={language}
-          />
-        )}
-
-        {currentTab === 'admin' && (
-          <AdminDashboard
-            language={language}
-          />
-        )}
-      </main>
-
-      {/* 3. Floating Voice Assistant Button */}
-      <button
-        onClick={() => setIsVoiceOpen(true)}
-        className="floating-voice-btn"
-        aria-label="Kisan Voice Assistant"
-        title="बोलकर पूछें (Voice Assistant)"
-      >
-        <Mic size={26} />
-      </button>
-
-      {/* 4. Mobile Bottom Navigation */}
-      <BottomNav
-        currentTab={currentTab}
-        onSelectTab={handleSelectTab}
-        language={language}
-        onOpenMenu={() => handleSelectTab('expenses')}
-      />
-
-      {/* 5. Modals & Overlays */}
-      <LocationModal
-        isOpen={isLocationOpen}
-        onClose={() => setIsLocationOpen(false)}
-        language={language}
-      />
-
-      <OnboardingModal
-        isOpen={isOnboardingOpen}
-        onComplete={() => setIsOnboardingOpen(false)}
-        language={language}
-      />
-
-      <VoiceAssistantModal
-        isOpen={isVoiceOpen}
-        onClose={() => setIsVoiceOpen(false)}
-        language={language}
-      />
-
-      <NotificationDrawer
-        isOpen={isNotificationOpen}
-        onClose={() => setIsNotificationOpen(false)}
-        onSelectTab={handleSelectTab}
-        language={language}
-      />
-
-      <AddCropModal
-        isOpen={isAddCropOpen}
-        onClose={() => setIsAddCropOpen(false)}
-        language={language}
-      />
+      {/* Global Modals & Notifications */}
+      <QuickCommandModal />
+      <SettingsModal />
+      <HelpDrawer />
+      <ToastContainer />
     </div>
   );
 };
 
-export default App;
+const MainRouter: React.FC = () => {
+  const { user, isAuthenticated, isLoading } = useAuth();
+  const { setActiveTab } = useAnalytics();
+  const [authView, setAuthView] = useState<'landing' | 'signin' | 'signup' | 'forgot'>('landing');
 
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'var(--bg-app)',
+          gap: 16
+        }}
+      >
+        <Loader2 size={36} className="animate-spin" style={{ color: 'var(--brand-primary)' }} />
+        <span style={{ fontSize: 14, color: 'var(--text-muted)' }}>Initializing NEXA Workspace...</span>
+      </div>
+    );
+  }
+
+  // If not authenticated, route between Landing and Auth Pages
+  if (!isAuthenticated || !user) {
+    if (authView === 'landing') {
+      return (
+        <LandingPage
+          onOpenAuth={(mode) => setAuthView(mode)}
+        />
+      );
+    }
+    return (
+      <AuthPage
+        initialMode={authView}
+        onBackToLanding={() => setAuthView('landing')}
+        onSuccess={() => {
+          // After auth, user will be loaded automatically
+        }}
+      />
+    );
+  }
+
+  // If authenticated but has not completed onboarding
+  if (!user.hasCompletedOnboarding) {
+    return (
+      <OnboardingPage
+        onComplete={(nextAction) => {
+          if (nextAction === 'manual') {
+            setActiveTab('manual-entry');
+          } else if (nextAction === 'upload') {
+            setActiveTab('data-sources');
+          } else {
+            setActiveTab('overview');
+          }
+        }}
+      />
+    );
+  }
+
+  // Fully authenticated and onboarded SaaS App
+  return <AppShell />;
+};
+
+export function App() {
+  return (
+    <ThemeProvider>
+      <AuthProvider>
+        <AnalyticsProvider>
+          <MainRouter />
+        </AnalyticsProvider>
+      </AuthProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;
