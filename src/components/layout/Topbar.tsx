@@ -17,7 +17,8 @@ import {
   Menu,
   Table,
   Database,
-  UploadCloud
+  UploadCloud,
+  Settings
 } from 'lucide-react';
 
 interface TopbarProps {
@@ -25,7 +26,7 @@ interface TopbarProps {
 }
 
 export const Topbar: React.FC<TopbarProps> = ({ onToggleMobileMenu }) => {
-  const { workspace, setIsCommandPaletteOpen, setActiveTab, setShowLanding, orders, kpis } = useAnalytics();
+  const { workspace, setIsCommandPaletteOpen, setActiveTab, setShowLanding, orders, kpis, setIsSettingsOpen } = useAnalytics();
   const { user, businessProfile, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
@@ -396,6 +397,17 @@ export const Topbar: React.FC<TopbarProps> = ({ onToggleMobileMenu }) => {
                 >
                   <Database size={15} />
                   <span>Data Sources</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setIsSettingsOpen(true);
+                    setIsUserMenuOpen(false);
+                  }}
+                  className="dropdown-item"
+                >
+                  <Settings size={15} />
+                  <span>Workspace Settings</span>
                 </button>
 
                 <div style={{ height: 1, backgroundColor: 'var(--border-subtle)', margin: '4px 0' }} />
