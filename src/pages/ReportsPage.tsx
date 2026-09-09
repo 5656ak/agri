@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAnalytics } from '../context/AnalyticsContext';
 import { useAuth } from '../context/AuthContext';
 import { BusinessReport } from '../types';
-import { exportReportSummary } from '../services/exportService';
+import { exportReportSummary, printExecutiveReport } from '../services/exportService';
 import { GenerateReportModal } from '../components/modals/GenerateReportModal';
 import { 
   FileText, 
@@ -27,8 +27,15 @@ export const ReportsPage: React.FC = () => {
   const businessName = businessProfile?.businessName || user?.businessName || 'My Business';
 
   const handleDownloadReport = (report: BusinessReport) => {
-    exportReportSummary(report.title, report);
-    addToast(`Exported "${report.title}" report summary`, 'success');
+    printExecutiveReport({
+      businessName,
+      reportTitle: report.title,
+      period: report.period,
+      kpis,
+      orders,
+      includeAiInsights: true
+    });
+    addToast(`Exported "${report.title}" report`, 'success');
   };
 
   const handleCreateReport = (newReportData: any) => {

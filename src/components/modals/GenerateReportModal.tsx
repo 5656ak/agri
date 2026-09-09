@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAnalytics } from '../../context/AnalyticsContext';
-import { exportReportSummary } from '../../services/exportService';
+import { useAuth } from '../../context/AuthContext';
+import { exportReportSummary, printExecutiveReport, exportOrdersToCsv } from '../../services/exportService';
 import { X, FileText, Download, CheckCircle2 } from 'lucide-react';
 
 interface GenerateReportModalProps {
@@ -9,7 +10,8 @@ interface GenerateReportModalProps {
 }
 
 export const GenerateReportModal: React.FC<GenerateReportModalProps> = ({ isOpen, onClose }) => {
-  const { kpis, addToast } = useAnalytics();
+  const { kpis, orders, addToast } = useAnalytics();
+  const { businessProfile, user } = useAuth();
 
   const [reportType, setReportType] = useState('Monthly Business Report');
   const [period, setPeriod] = useState('August - September 2026');
@@ -24,19 +26,26 @@ export const GenerateReportModal: React.FC<GenerateReportModalProps> = ({ isOpen
     setIsGenerating(true);
 
     setTimeout(() => {
-      exportReportSummary(reportType, {
-        reportType,
-        period,
-        format,
-        metrics: kpis,
-        includeForecast,
-        includeAiInsights
-      });
+      const businessName = businessProfile?.businessName || user?.businessName || 'My Business Workspace';
+
+      if (format === 'CSV') {
+        exportOrdersToCsv(orders, `${reportType.toLowerCase().replace(/\s+/g, '_')}.csv`);
+      } else {
+        printExecutiveReport({
+          businessName,
+          reportTitle: reportType,
+          period,
+          kpis,
+          orders,
+          includeForecast,
+          includeAiInsights
+        });
+      }
 
       addToast(`Generated ${reportType} (${format}) successfully!`, 'success');
       setIsGenerating(false);
       onClose();
-    }, 800);
+    }, 600);
   };
 
   return (
